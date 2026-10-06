@@ -1,0 +1,1 @@
+controller_manager:joint_state_publisher:joint_state_publisher_gui:rclcpp:robot_state_publisher:ros2_control:ros2_controllers:rviz2:sensor_msgs:std_msgs:xacro
