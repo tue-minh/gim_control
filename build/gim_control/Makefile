@@ -262,6 +262,43 @@ trajectory_simulator_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_simulator_node.dir/build.make CMakeFiles/trajectory_simulator_node.dir/build
 .PHONY : trajectory_simulator_node/fast
 
+#=============================================================================
+# Target rules for targets named impedance_simulator_node
+
+# Build rule for target.
+impedance_simulator_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 impedance_simulator_node
+.PHONY : impedance_simulator_node
+
+# fast build rule for target.
+impedance_simulator_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/build
+.PHONY : impedance_simulator_node/fast
+
+src/impedance_simulator_node.o: src/impedance_simulator_node.cpp.o
+.PHONY : src/impedance_simulator_node.o
+
+# target to build an object file
+src/impedance_simulator_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o
+.PHONY : src/impedance_simulator_node.cpp.o
+
+src/impedance_simulator_node.i: src/impedance_simulator_node.cpp.i
+.PHONY : src/impedance_simulator_node.i
+
+# target to preprocess a source file
+src/impedance_simulator_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.i
+.PHONY : src/impedance_simulator_node.cpp.i
+
+src/impedance_simulator_node.s: src/impedance_simulator_node.cpp.s
+.PHONY : src/impedance_simulator_node.s
+
+# target to generate assembly for a file
+src/impedance_simulator_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.s
+.PHONY : src/impedance_simulator_node.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -449,7 +486,11 @@ help:
 	@echo "... gim_control_node"
 	@echo "... gim_kinematics"
 	@echo "... gim_trajectory"
+	@echo "... impedance_simulator_node"
 	@echo "... trajectory_simulator_node"
+	@echo "... src/impedance_simulator_node.o"
+	@echo "... src/impedance_simulator_node.i"
+	@echo "... src/impedance_simulator_node.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

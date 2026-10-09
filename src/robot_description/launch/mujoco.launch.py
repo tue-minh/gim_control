@@ -85,7 +85,7 @@ def generate_launch_description():
     arm_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=['arm_controller', '-c', '/controller_manager'],
+        arguments=['arm_controller', '-c', '/controller_manager', '--inactive'],
     )
 
     arm_velocity_spawner = Node(
@@ -97,7 +97,7 @@ def generate_launch_description():
     arm_effort_spawner = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=['arm_effort_controller', '-c', '/controller_manager', '--inactive'],
+        arguments=['arm_effort_controller', '-c', '/controller_manager'],
     )
 
     return LaunchDescription([

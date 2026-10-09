@@ -3,6 +3,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition
 from launch_ros.actions import Node
 
 def generate_launch_description():
@@ -19,6 +20,10 @@ def generate_launch_description():
         robot_desc = infp.read()
         
     return LaunchDescription([
+        DeclareLaunchArgument(
+            name='gui',
+            default_value='true',
+            description='Flag to enable joint_state_publisher_gui'),
         DeclareLaunchArgument(
             name='urdf_model', 
             default_value=default_urdf_path, 
@@ -40,12 +45,13 @@ def generate_launch_description():
             parameters=[{'use_sim_time': use_sim_time, 'robot_description': robot_desc}]
         ),
         
-        # Node(
-        #     package='joint_state_publisher_gui',
-        #     executable='joint_state_publisher_gui',
-        #     name='joint_state_publisher_gui',
-        #     output='screen',
-        # ),
+        Node(
+            package='joint_state_publisher_gui',
+            executable='joint_state_publisher_gui',
+            name='joint_state_publisher_gui',
+            output='screen',
+            condition=IfCondition(LaunchConfiguration('gui'))
+        ),
         
         Node(
             package='rviz2',

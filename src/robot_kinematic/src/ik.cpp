@@ -12,7 +12,7 @@ std::vector<double> inverse_kinematics(const Eigen::Vector3d& target_pos, const 
     
     int max_iterations = 500;
     double tolerance = 1e-4;
-    double lambda = 0.1; // Damping factor for DLS
+    double lambda = 0.1; // Dampin                          actor for DLS
     double alpha = 0.5;  // Step size multiplier
     
     for (int iter = 0; iter < max_iterations; ++iter) {

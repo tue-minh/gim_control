@@ -66,9 +66,15 @@ add_executable(trajectory_simulator_node
 ament_target_dependencies(trajectory_simulator_node rclcpp sensor_msgs)
 target_link_libraries(trajectory_simulator_node gim_kinematics gim_trajectory)
 
+add_executable(impedance_simulator_node
+  src/impedance_simulator_node.cpp
+)
+ament_target_dependencies(impedance_simulator_node rclcpp sensor_msgs)
+target_link_libraries(impedance_simulator_node gim_kinematics gim_trajectory)
+
 ament_export_libraries(gim_control_interface gim_kinematics gim_trajectory)
 
-install(TARGETS gim_control_interface gim_kinematics gim_trajectory gim_control_node trajectory_simulator_node
+install(TARGETS gim_control_interface gim_kinematics gim_trajectory gim_control_node trajectory_simulator_node impedance_simulator_node
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}

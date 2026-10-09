@@ -80,7 +80,6 @@ private:
                 
                 trajectory_data_.push_back(pt);
             } catch (const std::exception& e) {
-                // Ignore empty or malformed lines, often happens at EOF
                 continue;
             }
         }

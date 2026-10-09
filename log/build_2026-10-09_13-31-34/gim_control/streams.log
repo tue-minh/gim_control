@@ -1,0 +1,131 @@
+[0.012s] Invoking command in '/home/tue/gim_control/build/gim_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/tue/gim_control -DCMAKE_INSTALL_PREFIX=/home/tue/gim_control/install/gim_control
+[0.100s] -- The C compiler identification is GNU 11.4.0
+[0.172s] -- The CXX compiler identification is GNU 11.4.0
+[0.183s] -- Detecting C compiler ABI info
+[0.274s] -- Detecting C compiler ABI info - done
+[0.281s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.282s] -- Detecting C compile features
+[0.282s] -- Detecting C compile features - done
+[0.285s] -- Detecting CXX compiler ABI info
+[0.375s] -- Detecting CXX compiler ABI info - done
+[0.381s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.382s] -- Detecting CXX compile features
+[0.382s] -- Detecting CXX compile features - done
+[0.385s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.529s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.630s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.671s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.676s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.684s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.696s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.712s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.754s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.756s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.880s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.914s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.963s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.972s] -- Looking for pthread.h
+[1.068s] -- Looking for pthread.h - found
+[1.069s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.154s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.155s] -- Found Threads: TRUE  
+[1.205s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.246s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.377s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.378s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/tue/gim_control/src/robot_kinematic/include>;$<BUILD_INTERFACE:/home/tue/gim_control/src/robot_trajectory/include>;$<BUILD_INTERFACE:/home/tue/gim_control/src/robot_hardware/include>;/home/tue/gim_control/src/robot_hardware/include
+[1.378s] -- Configured cppcheck exclude dirs and/or files: 
+[1.385s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.398s] -- Added test 'lint_cmake' to check CMake code style
+[1.405s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.458s] -- Added test 'uncrustify' to check C / C++ code style
+[1.458s] -- Configured uncrustify additional arguments: 
+[1.465s] -- Added test 'xmllint' to check XML markup files
+[1.467s] -- Configuring done
+[1.491s] -- Generating done
+[1.500s] -- Build files have been written to: /home/tue/gim_control/build/gim_control
+[1.512s] Invoked command in '/home/tue/gim_control/build/gim_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/tue/gim_control -DCMAKE_INSTALL_PREFIX=/home/tue/gim_control/install/gim_control
+[1.513s] Invoking command in '/home/tue/gim_control/build/gim_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tue/gim_control/build/gim_control -- -j12 -l12
+[1.572s] [ 35%] [32mBuilding CXX object CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/jacobian.cpp.o[0m
+[1.572s] [ 35%] [32mBuilding CXX object CMakeFiles/gim_trajectory.dir/src/robot_trajectory/src/trajectory.cpp.o[0m
+[1.572s] [ 35%] [32mBuilding CXX object CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/ik.cpp.o[0m
+[1.572s] [ 35%] [32mBuilding CXX object CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/fk.cpp.o[0m
+[1.572s] [ 35%] [32mBuilding CXX object CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o[0m
+[2.591s] [ 42%] [32m[1mLinking CXX static library libgim_trajectory.a[0m
+[2.635s] [ 42%] Built target gim_trajectory
+[4.609s] [ 50%] [32m[1mLinking CXX static library libgim_control_interface.a[0m
+[4.655s] [ 50%] Built target gim_control_interface
+[4.683s] [ 57%] [32mBuilding CXX object CMakeFiles/gim_control_node.dir/src/main.cpp.o[0m
+[5.447s] [ 64%] [32m[1mLinking CXX static library libgim_kinematics.a[0m
+[5.554s] [ 64%] Built target gim_kinematics
+[5.579s] [ 78%] [32mBuilding CXX object CMakeFiles/trajectory_simulator_node.dir/src/trajectory_simulator_node.cpp.o[0m
+[5.579s] [ 78%] [32mBuilding CXX object CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o[0m
+[7.491s] [ 85%] [32m[1mLinking CXX executable gim_control_node[0m
+[7.659s] [ 85%] Built target gim_control_node
+[9.724s] [ 92%] [32m[1mLinking CXX executable trajectory_simulator_node[0m
+[9.966s] [ 92%] Built target trajectory_simulator_node
+[15.547s] [100%] [32m[1mLinking CXX executable impedance_simulator_node[0m
+[16.283s] [100%] Built target impedance_simulator_node
+[16.298s] Invoked command in '/home/tue/gim_control/build/gim_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tue/gim_control/build/gim_control -- -j12 -l12
+[16.310s] Invoking command in '/home/tue/gim_control/build/gim_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tue/gim_control/build/gim_control
+[16.317s] -- Install configuration: ""
+[16.317s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.sh
+[16.317s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.dsv
+[16.318s] -- Installing: /home/tue/gim_control/install/gim_control/lib/libgim_control_interface.a
+[16.319s] -- Installing: /home/tue/gim_control/install/gim_control/lib/libgim_kinematics.a
+[16.330s] -- Installing: /home/tue/gim_control/install/gim_control/lib/libgim_trajectory.a
+[16.331s] -- Installing: /home/tue/gim_control/install/gim_control/lib/gim_control/gim_control_node
+[16.331s] -- Set runtime path of "/home/tue/gim_control/install/gim_control/lib/gim_control/gim_control_node" to ""
+[16.331s] -- Installing: /home/tue/gim_control/install/gim_control/lib/gim_control/trajectory_simulator_node
+[16.334s] -- Set runtime path of "/home/tue/gim_control/install/gim_control/lib/gim_control/trajectory_simulator_node" to ""
+[16.334s] -- Installing: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_simulator_node
+[16.345s] -- Set runtime path of "/home/tue/gim_control/install/gim_control/lib/gim_control/impedance_simulator_node" to ""
+[16.345s] -- Installing: /home/tue/gim_control/install/gim_control/include
+[16.345s] -- Installing: /home/tue/gim_control/install/gim_control/include/gim_control_interface.hpp
+[16.345s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include
+[16.346s] -- Installing: /home/tue/gim_control/install/gim_control/include/fk.hpp
+[16.346s] -- Installing: /home/tue/gim_control/install/gim_control/include/ik.hpp
+[16.346s] -- Installing: /home/tue/gim_control/install/gim_control/include/jacobian.hpp
+[16.346s] -- Installing: /home/tue/gim_control/install/gim_control/include/utils.hpp
+[16.346s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include
+[16.346s] -- Installing: /home/tue/gim_control/install/gim_control/include/trajectory.hpp
+[16.346s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf
+[16.347s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets
+[16.347s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/decomposed
+[16.347s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full
+[16.347s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/upper_arm_link.stl
+[16.351s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/lower_arm_link.stl
+[16.352s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/base_link.stl
+[16.356s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/shoulder_link.stl
+[16.356s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/gim_arm.urdf
+[16.357s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/mujoco_description.xml
+[16.357s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/robot_description_formatted.urdf
+[16.357s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/meshes
+[16.357s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/base_link.STL
+[16.361s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/upper_arm_link.STL
+[16.365s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/lower_arm_link.STL
+[16.366s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/shoulder_link.STL
+[16.367s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/launch
+[16.367s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/launch/display.launch.py
+[16.367s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/launch/mujoco.launch.py
+[16.367s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/rviz
+[16.367s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/rviz/urdf.rviz
+[16.367s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/config
+[16.367s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/config/controllers.yaml
+[16.367s] -- Installing: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/package_run_dependencies/gim_control
+[16.368s] -- Installing: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/parent_prefix_path/gim_control
+[16.368s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.sh
+[16.368s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.dsv
+[16.368s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.sh
+[16.368s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.dsv
+[16.368s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.bash
+[16.368s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.sh
+[16.369s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.zsh
+[16.369s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.dsv
+[16.369s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/package.dsv
+[16.369s] -- Installing: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/packages/gim_control
+[16.369s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[16.370s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_libraries-extras.cmake
+[16.370s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig.cmake
+[16.370s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig-version.cmake
+[16.370s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/package.xml
+[16.374s] Invoked command in '/home/tue/gim_control/build/gim_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tue/gim_control/build/gim_control

@@ -1,1 +1,29 @@
-/home/tue/gim_control/src/robot_description/urdf/mujoco_description.xml
+<mujoco model="gim_arm">
+  <compiler angle="radian" meshdir="assets/" texturedir="assets/"/>
+
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="full/base_link.stl"/>
+    <mesh name="shoulder_link" content_type="model/stl" file="full/shoulder_link.stl"/>
+    <mesh name="upper_arm_link" content_type="model/stl" file="full/upper_arm_link.stl"/>
+    <mesh name="lower_arm_link" content_type="model/stl" file="full/lower_arm_link.stl"/>
+  </asset>
+
+  <worldbody>
+    <geom pos="0 0 0" quat="0.999334 0.0364919 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.752941 0.752941 0.752941 1" density="0" mesh="base_link"/>
+    <body name="shoulder_link" pos="0.031381 -0.532211 0.611271" quat="0.707725 0.094419 0.692676 0.102034">
+      <inertial pos="-0.12963 0.0049354 -0.047727" quat="0.673073 -0.250377 -0.254252 0.647796" mass="0.078544" diaginertia="0.000188963 0.000185928 3.80693e-05"/>
+      <joint name="base_joint" range="-0.7121 1.0226" actuatorfrcrange="-5 5" axis="0.999316 -0.0310989 -0.0199989"/>
+      <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.752941 0.752941 0.752941 1" density="0" mesh="shoulder_link"/>
+      <body name="upper_arm_link" pos="-0.049966 0.001555 0.00099995" quat="0.597482 -0.498524 -0.393486 0.489549">
+        <inertial pos="-0.022717 0.105 -0.10081" quat="0.665721 -0.00508448 0.0604923 0.743728" mass="1.2678" diaginertia="0.00542037 0.0047041 0.00105414"/>
+        <joint name="shoulder_joint" range="-0.2366 1.3435" actuatorfrcrange="-40 40" axis="0 -1 0"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.545098 0 0.870588 1" density="0" mesh="upper_arm_link"/>
+        <body name="lower_arm_link" pos="-0.014232 0 -0.21358" quat="0.513419 -0.513421 0.486209 0.486211">
+          <inertial pos="0.20796 0.011597 0.034173" quat="0.0279686 0.776372 0.020792 0.629311" mass="0.73459" diaginertia="0.00176924 0.00157935 0.000536127"/>
+          <joint name="elbow_joint" range="-0.2336 1.7762" actuatorfrcrange="-5 5" axis="0 0 -1"/>
+          <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 0.509804 0.196078 1" density="0" mesh="lower_arm_link"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

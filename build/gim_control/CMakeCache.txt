@@ -25,7 +25,7 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
-AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -277,9 +277,6 @@ TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 //Path to a library.
 _lib:FILEPATH=/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 
-//The directory containing a CMake configuration file for action_msgs.
-action_msgs_DIR:PATH=/opt/ros/humble/share/action_msgs/cmake
-
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
 
@@ -376,12 +373,6 @@ ament_xmllint_BIN:FILEPATH=/opt/ros/humble/bin/ament_xmllint
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/humble/share/builtin_interfaces/cmake
 
-//The directory containing a CMake configuration file for control_msgs.
-control_msgs_DIR:PATH=/opt/ros/humble/share/control_msgs/cmake
-
-//The directory containing a CMake configuration file for eigen3_cmake_module.
-eigen3_cmake_module_DIR:PATH=/opt/ros/humble/share/eigen3_cmake_module/cmake
-
 //The directory containing a CMake configuration file for fastcdr.
 fastcdr_DIR:PATH=/opt/ros/humble/lib/cmake/fastcdr
 
@@ -412,23 +403,11 @@ gim_control_SOURCE_DIR:STATIC=/home/tue/gim_control
 //Dependencies for the target
 gim_control_interface_LIB_DEPENDS:STATIC=general;rclcpp::rclcpp;general;std_msgs::std_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_cpp;general;std_msgs::std_msgs__rosidl_typesupport_introspection_c;general;std_msgs::std_msgs__rosidl_typesupport_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_cpp;general;std_msgs::std_msgs__rosidl_typesupport_cpp;general;std_msgs::std_msgs__rosidl_generator_py;general;sensor_msgs::sensor_msgs__rosidl_generator_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_cpp;general;sensor_msgs::sensor_msgs__rosidl_generator_py;
 
-//The directory containing a CMake configuration file for kdl_parser.
-kdl_parser_DIR:PATH=/opt/ros/humble/share/kdl_parser/cmake
-
 //The directory containing a CMake configuration file for libstatistics_collector.
 libstatistics_collector_DIR:PATH=/opt/ros/humble/share/libstatistics_collector/cmake
 
 //The directory containing a CMake configuration file for libyaml_vendor.
 libyaml_vendor_DIR:PATH=/opt/ros/humble/share/libyaml_vendor/cmake
-
-//The directory containing a CMake configuration file for orocos_kdl.
-orocos_kdl_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/orocos_kdl
-
-//Path to a library.
-orocos_kdl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/liborocos-kdl.so
-
-//The directory containing a CMake configuration file for orocos_kdl_vendor.
-orocos_kdl_vendor_DIR:PATH=/opt/ros/humble/share/orocos_kdl_vendor/cmake
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -438,9 +417,6 @@ pkgcfg_lib__OPENSSL_ssl:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
 
 //The directory containing a CMake configuration file for rcl.
 rcl_DIR:PATH=/opt/ros/humble/share/rcl/cmake
-
-//The directory containing a CMake configuration file for rcl_action.
-rcl_action_DIR:PATH=/opt/ros/humble/share/rcl_action/cmake
 
 //The directory containing a CMake configuration file for rcl_interfaces.
 rcl_interfaces_DIR:PATH=/opt/ros/humble/share/rcl_interfaces/cmake
@@ -456,9 +432,6 @@ rcl_yaml_param_parser_DIR:PATH=/opt/ros/humble/share/rcl_yaml_param_parser/cmake
 
 //The directory containing a CMake configuration file for rclcpp.
 rclcpp_DIR:PATH=/opt/ros/humble/share/rclcpp/cmake
-
-//The directory containing a CMake configuration file for rclcpp_action.
-rclcpp_action_DIR:PATH=/opt/ros/humble/share/rclcpp_action/cmake
 
 //The directory containing a CMake configuration file for rcpputils.
 rcpputils_DIR:PATH=/opt/ros/humble/share/rcpputils/cmake
@@ -546,15 +519,6 @@ std_msgs_DIR:PATH=/opt/ros/humble/share/std_msgs/cmake
 
 //The directory containing a CMake configuration file for tracetools.
 tracetools_DIR:PATH=/opt/ros/humble/share/tracetools/cmake
-
-//The directory containing a CMake configuration file for trajectory_msgs.
-trajectory_msgs_DIR:PATH=/opt/ros/humble/share/trajectory_msgs/cmake
-
-//The directory containing a CMake configuration file for unique_identifier_msgs.
-unique_identifier_msgs_DIR:PATH=/opt/ros/humble/share/unique_identifier_msgs/cmake
-
-//The directory containing a CMake configuration file for urdfdom_headers.
-urdfdom_headers_DIR:PATH=/opt/ros/humble/lib/x86_64-linux-gnu/urdfdom_headers/cmake
 
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint
@@ -714,8 +678,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding Eigen3
-FIND_PACKAGE_MESSAGE_DETAILS_Eigen3:INTERNAL=[1][v3.4.0()]
 //Details about finding FastRTPS
 FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/humble/include][/opt/ros/humble/lib/libfastrtps.so;/opt/ros/humble/lib/libfastcdr.so][v()]
 //Details about finding OpenSSL
@@ -773,8 +735,6 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=0f3e53742e142b1d9e50e4ca5b901dd8
-//Index for unique symlink install targets
-__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=1
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_checked__OPENSSL:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto
