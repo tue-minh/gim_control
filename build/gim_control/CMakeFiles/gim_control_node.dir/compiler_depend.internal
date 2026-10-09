@@ -4,7 +4,7 @@
 CMakeFiles/gim_control_node.dir/src/main.cpp.o
  /home/tue/gim_control/src/main.cpp
  /usr/include/stdc-predef.h
- /home/tue/gim_control/include/ros2_gim_control/gim_control_interface.hpp
+ /home/tue/gim_control/src/robot_hardware/include/gim_control_interface.hpp
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp
  /usr/include/c++/11/csignal
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h

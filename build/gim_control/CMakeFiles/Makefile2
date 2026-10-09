@@ -63,8 +63,11 @@ CMAKE_BINARY_DIR = /home/tue/gim_control/build/gim_control
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/gim_kinematics.dir/all
+all: CMakeFiles/gim_trajectory.dir/all
 all: CMakeFiles/gim_control_interface.dir/all
 all: CMakeFiles/gim_control_node.dir/all
+all: CMakeFiles/trajectory_simulator_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,8 +77,11 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/gim_control_uninstall.dir/clean
+clean: CMakeFiles/gim_kinematics.dir/clean
+clean: CMakeFiles/gim_trajectory.dir/clean
 clean: CMakeFiles/gim_control_interface.dir/clean
 clean: CMakeFiles/gim_control_node.dir/clean
+clean: CMakeFiles/trajectory_simulator_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -131,6 +137,58 @@ CMakeFiles/gim_control_uninstall.dir/clean:
 .PHONY : CMakeFiles/gim_control_uninstall.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/gim_kinematics.dir
+
+# All Build rule for target.
+CMakeFiles/gim_kinematics.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tue/gim_control/build/gim_control/CMakeFiles --progress-num=5,6,7,8 "Built target gim_kinematics"
+.PHONY : CMakeFiles/gim_kinematics.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gim_kinematics.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gim_kinematics.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 0
+.PHONY : CMakeFiles/gim_kinematics.dir/rule
+
+# Convenience name for target.
+gim_kinematics: CMakeFiles/gim_kinematics.dir/rule
+.PHONY : gim_kinematics
+
+# clean rule for target.
+CMakeFiles/gim_kinematics.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/clean
+.PHONY : CMakeFiles/gim_kinematics.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gim_trajectory.dir
+
+# All Build rule for target.
+CMakeFiles/gim_trajectory.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_trajectory.dir/build.make CMakeFiles/gim_trajectory.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_trajectory.dir/build.make CMakeFiles/gim_trajectory.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tue/gim_control/build/gim_control/CMakeFiles --progress-num=9,10 "Built target gim_trajectory"
+.PHONY : CMakeFiles/gim_trajectory.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gim_trajectory.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gim_trajectory.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 0
+.PHONY : CMakeFiles/gim_trajectory.dir/rule
+
+# Convenience name for target.
+gim_trajectory: CMakeFiles/gim_trajectory.dir/rule
+.PHONY : gim_trajectory
+
+# clean rule for target.
+CMakeFiles/gim_trajectory.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_trajectory.dir/build.make CMakeFiles/gim_trajectory.dir/clean
+.PHONY : CMakeFiles/gim_trajectory.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/gim_control_interface.dir
 
 # All Build rule for target.
@@ -181,6 +239,33 @@ gim_control_node: CMakeFiles/gim_control_node.dir/rule
 CMakeFiles/gim_control_node.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_node.dir/build.make CMakeFiles/gim_control_node.dir/clean
 .PHONY : CMakeFiles/gim_control_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/trajectory_simulator_node.dir
+
+# All Build rule for target.
+CMakeFiles/trajectory_simulator_node.dir/all: CMakeFiles/gim_kinematics.dir/all
+CMakeFiles/trajectory_simulator_node.dir/all: CMakeFiles/gim_trajectory.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_simulator_node.dir/build.make CMakeFiles/trajectory_simulator_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_simulator_node.dir/build.make CMakeFiles/trajectory_simulator_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tue/gim_control/build/gim_control/CMakeFiles --progress-num=11,12 "Built target trajectory_simulator_node"
+.PHONY : CMakeFiles/trajectory_simulator_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/trajectory_simulator_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/trajectory_simulator_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 0
+.PHONY : CMakeFiles/trajectory_simulator_node.dir/rule
+
+# Convenience name for target.
+trajectory_simulator_node: CMakeFiles/trajectory_simulator_node.dir/rule
+.PHONY : trajectory_simulator_node
+
+# clean rule for target.
+CMakeFiles/trajectory_simulator_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_simulator_node.dir/build.make CMakeFiles/trajectory_simulator_node.dir/clean
+.PHONY : CMakeFiles/trajectory_simulator_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

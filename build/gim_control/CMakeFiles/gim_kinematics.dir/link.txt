@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgim_kinematics.a CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/fk.cpp.o CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/ik.cpp.o CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/jacobian.cpp.o
+/usr/bin/ranlib libgim_kinematics.a

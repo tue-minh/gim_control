@@ -1,2 +1,2 @@
-/usr/bin/ar qc libgim_control_interface.a CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o
+/usr/bin/ar qc libgim_control_interface.a CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o
 /usr/bin/ranlib libgim_control_interface.a

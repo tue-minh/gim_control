@@ -69,28 +69,28 @@ include CMakeFiles/gim_control_interface.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/gim_control_interface.dir/flags.make
 
-CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o: CMakeFiles/gim_control_interface.dir/flags.make
-CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o: ../../src/gim_control_interface.cpp
-CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o: CMakeFiles/gim_control_interface.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tue/gim_control/build/gim_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o -MF CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o.d -o CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o -c /home/tue/gim_control/src/gim_control_interface.cpp
+CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o: CMakeFiles/gim_control_interface.dir/flags.make
+CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o: ../../src/robot_hardware/src/gim_control_interface.cpp
+CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o: CMakeFiles/gim_control_interface.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tue/gim_control/build/gim_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o -MF CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o.d -o CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o -c /home/tue/gim_control/src/robot_hardware/src/gim_control_interface.cpp
 
-CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tue/gim_control/src/gim_control_interface.cpp > CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.i
+CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tue/gim_control/src/robot_hardware/src/gim_control_interface.cpp > CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.i
 
-CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tue/gim_control/src/gim_control_interface.cpp -o CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.s
+CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tue/gim_control/src/robot_hardware/src/gim_control_interface.cpp -o CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.s
 
 # Object files for target gim_control_interface
 gim_control_interface_OBJECTS = \
-"CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o"
+"CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o"
 
 # External object files for target gim_control_interface
 gim_control_interface_EXTERNAL_OBJECTS =
 
-libgim_control_interface.a: CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o
+libgim_control_interface.a: CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o
 libgim_control_interface.a: CMakeFiles/gim_control_interface.dir/build.make
 libgim_control_interface.a: CMakeFiles/gim_control_interface.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tue/gim_control/build/gim_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgim_control_interface.a"

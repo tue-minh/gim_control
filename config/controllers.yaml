@@ -8,6 +8,12 @@ controller_manager:
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
+    arm_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    arm_effort_controller:
+      type: effort_controllers/JointGroupEffortController
+
 arm_controller:
   ros__parameters:
     joints:
@@ -16,6 +22,30 @@ arm_controller:
       - elbow_joint
     command_interfaces:
       - position
+    state_interfaces:
+      - position
+      - velocity
+
+arm_velocity_controller:
+  ros__parameters:
+    joints:
+      - base_joint
+      - shoulder_joint
+      - elbow_joint
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+
+arm_effort_controller:
+  ros__parameters:
+    joints:
+      - base_joint
+      - shoulder_joint
+      - elbow_joint
+    command_interfaces:
+      - effort
     state_interfaces:
       - position
       - velocity

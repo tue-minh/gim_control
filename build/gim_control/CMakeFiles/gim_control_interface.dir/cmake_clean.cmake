@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o"
-  "CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o.d"
+  "CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o"
+  "CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o.d"
   "libgim_control_interface.a"
   "libgim_control_interface.pdb"
 )

@@ -1,0 +1,115 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-bd10cd2e2f771ecbe99a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "gim_control",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_control_interface::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_control_interface-b7647e6d45dab139e6d0.json",
+					"name" : "gim_control_interface",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_control_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_control_node-59c6881c2dee5bb63b24.json",
+					"name" : "gim_control_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_control_uninstall-db0b6d12402bc27bdee4.json",
+					"name" : "gim_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_kinematics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_kinematics-182052455e4fa56afd8c.json",
+					"name" : "gim_kinematics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_trajectory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_trajectory-e5995b3771330b8cc224.json",
+					"name" : "gim_trajectory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trajectory_simulator_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trajectory_simulator_node-d9e37f283f4c2500ef65.json",
+					"name" : "trajectory_simulator_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-8c335852686662eab517.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tue/gim_control/build/gim_control",
+		"source" : "/home/tue/gim_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

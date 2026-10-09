@@ -209,6 +209,8 @@
 
   <joint name="base_joint">
     <command_interface name="position"/>
+    <command_interface name="velocity"/>
+    <command_interface name="effort"/>
     <state_interface name="position"/>
     <state_interface name="velocity"/>
     <param name="can_node_id">0</param>
@@ -220,6 +222,8 @@
 
   <joint name="shoulder_joint">
     <command_interface name="position"/>
+    <command_interface name="velocity"/>
+    <command_interface name="effort"/>
     <state_interface name="position"/>
     <state_interface name="velocity"/>
     <param name="can_node_id">1</param>
@@ -231,6 +235,8 @@
 
   <joint name="elbow_joint">
     <command_interface name="position"/>
+    <command_interface name="velocity"/>
+    <command_interface name="effort"/>
     <state_interface name="position"/>
     <state_interface name="velocity"/>
     <param name="can_node_id">2</param>

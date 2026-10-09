@@ -29,7 +29,7 @@ Build the package:
 cd /home/tue/gim_control
 colcon build --packages-select gim_control
 ```
-
+r
 After building, source the setup script:
 
 ```bash

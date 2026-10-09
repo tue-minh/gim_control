@@ -198,6 +198,32 @@ gim_control_uninstall/fast:
 .PHONY : gim_control_uninstall/fast
 
 #=============================================================================
+# Target rules for targets named gim_kinematics
+
+# Build rule for target.
+gim_kinematics: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gim_kinematics
+.PHONY : gim_kinematics
+
+# fast build rule for target.
+gim_kinematics/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/build
+.PHONY : gim_kinematics/fast
+
+#=============================================================================
+# Target rules for targets named gim_trajectory
+
+# Build rule for target.
+gim_trajectory: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gim_trajectory
+.PHONY : gim_trajectory
+
+# fast build rule for target.
+gim_trajectory/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_trajectory.dir/build.make CMakeFiles/gim_trajectory.dir/build
+.PHONY : gim_trajectory/fast
+
+#=============================================================================
 # Target rules for targets named gim_control_interface
 
 # Build rule for target.
@@ -223,29 +249,18 @@ gim_control_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_node.dir/build.make CMakeFiles/gim_control_node.dir/build
 .PHONY : gim_control_node/fast
 
-src/gim_control_interface.o: src/gim_control_interface.cpp.o
-.PHONY : src/gim_control_interface.o
+#=============================================================================
+# Target rules for targets named trajectory_simulator_node
 
-# target to build an object file
-src/gim_control_interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_interface.dir/build.make CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.o
-.PHONY : src/gim_control_interface.cpp.o
+# Build rule for target.
+trajectory_simulator_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 trajectory_simulator_node
+.PHONY : trajectory_simulator_node
 
-src/gim_control_interface.i: src/gim_control_interface.cpp.i
-.PHONY : src/gim_control_interface.i
-
-# target to preprocess a source file
-src/gim_control_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_interface.dir/build.make CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.i
-.PHONY : src/gim_control_interface.cpp.i
-
-src/gim_control_interface.s: src/gim_control_interface.cpp.s
-.PHONY : src/gim_control_interface.s
-
-# target to generate assembly for a file
-src/gim_control_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_interface.dir/build.make CMakeFiles/gim_control_interface.dir/src/gim_control_interface.cpp.s
-.PHONY : src/gim_control_interface.cpp.s
+# fast build rule for target.
+trajectory_simulator_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_simulator_node.dir/build.make CMakeFiles/trajectory_simulator_node.dir/build
+.PHONY : trajectory_simulator_node/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -271,6 +286,150 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_node.dir/build.make CMakeFiles/gim_control_node.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/robot_hardware/src/gim_control_interface.o: src/robot_hardware/src/gim_control_interface.cpp.o
+.PHONY : src/robot_hardware/src/gim_control_interface.o
+
+# target to build an object file
+src/robot_hardware/src/gim_control_interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_interface.dir/build.make CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.o
+.PHONY : src/robot_hardware/src/gim_control_interface.cpp.o
+
+src/robot_hardware/src/gim_control_interface.i: src/robot_hardware/src/gim_control_interface.cpp.i
+.PHONY : src/robot_hardware/src/gim_control_interface.i
+
+# target to preprocess a source file
+src/robot_hardware/src/gim_control_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_interface.dir/build.make CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.i
+.PHONY : src/robot_hardware/src/gim_control_interface.cpp.i
+
+src/robot_hardware/src/gim_control_interface.s: src/robot_hardware/src/gim_control_interface.cpp.s
+.PHONY : src/robot_hardware/src/gim_control_interface.s
+
+# target to generate assembly for a file
+src/robot_hardware/src/gim_control_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_interface.dir/build.make CMakeFiles/gim_control_interface.dir/src/robot_hardware/src/gim_control_interface.cpp.s
+.PHONY : src/robot_hardware/src/gim_control_interface.cpp.s
+
+src/robot_kinematic/src/fk.o: src/robot_kinematic/src/fk.cpp.o
+.PHONY : src/robot_kinematic/src/fk.o
+
+# target to build an object file
+src/robot_kinematic/src/fk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/fk.cpp.o
+.PHONY : src/robot_kinematic/src/fk.cpp.o
+
+src/robot_kinematic/src/fk.i: src/robot_kinematic/src/fk.cpp.i
+.PHONY : src/robot_kinematic/src/fk.i
+
+# target to preprocess a source file
+src/robot_kinematic/src/fk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/fk.cpp.i
+.PHONY : src/robot_kinematic/src/fk.cpp.i
+
+src/robot_kinematic/src/fk.s: src/robot_kinematic/src/fk.cpp.s
+.PHONY : src/robot_kinematic/src/fk.s
+
+# target to generate assembly for a file
+src/robot_kinematic/src/fk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/fk.cpp.s
+.PHONY : src/robot_kinematic/src/fk.cpp.s
+
+src/robot_kinematic/src/ik.o: src/robot_kinematic/src/ik.cpp.o
+.PHONY : src/robot_kinematic/src/ik.o
+
+# target to build an object file
+src/robot_kinematic/src/ik.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/ik.cpp.o
+.PHONY : src/robot_kinematic/src/ik.cpp.o
+
+src/robot_kinematic/src/ik.i: src/robot_kinematic/src/ik.cpp.i
+.PHONY : src/robot_kinematic/src/ik.i
+
+# target to preprocess a source file
+src/robot_kinematic/src/ik.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/ik.cpp.i
+.PHONY : src/robot_kinematic/src/ik.cpp.i
+
+src/robot_kinematic/src/ik.s: src/robot_kinematic/src/ik.cpp.s
+.PHONY : src/robot_kinematic/src/ik.s
+
+# target to generate assembly for a file
+src/robot_kinematic/src/ik.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/ik.cpp.s
+.PHONY : src/robot_kinematic/src/ik.cpp.s
+
+src/robot_kinematic/src/jacobian.o: src/robot_kinematic/src/jacobian.cpp.o
+.PHONY : src/robot_kinematic/src/jacobian.o
+
+# target to build an object file
+src/robot_kinematic/src/jacobian.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/jacobian.cpp.o
+.PHONY : src/robot_kinematic/src/jacobian.cpp.o
+
+src/robot_kinematic/src/jacobian.i: src/robot_kinematic/src/jacobian.cpp.i
+.PHONY : src/robot_kinematic/src/jacobian.i
+
+# target to preprocess a source file
+src/robot_kinematic/src/jacobian.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/jacobian.cpp.i
+.PHONY : src/robot_kinematic/src/jacobian.cpp.i
+
+src/robot_kinematic/src/jacobian.s: src/robot_kinematic/src/jacobian.cpp.s
+.PHONY : src/robot_kinematic/src/jacobian.s
+
+# target to generate assembly for a file
+src/robot_kinematic/src/jacobian.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/jacobian.cpp.s
+.PHONY : src/robot_kinematic/src/jacobian.cpp.s
+
+src/robot_trajectory/src/trajectory.o: src/robot_trajectory/src/trajectory.cpp.o
+.PHONY : src/robot_trajectory/src/trajectory.o
+
+# target to build an object file
+src/robot_trajectory/src/trajectory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_trajectory.dir/build.make CMakeFiles/gim_trajectory.dir/src/robot_trajectory/src/trajectory.cpp.o
+.PHONY : src/robot_trajectory/src/trajectory.cpp.o
+
+src/robot_trajectory/src/trajectory.i: src/robot_trajectory/src/trajectory.cpp.i
+.PHONY : src/robot_trajectory/src/trajectory.i
+
+# target to preprocess a source file
+src/robot_trajectory/src/trajectory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_trajectory.dir/build.make CMakeFiles/gim_trajectory.dir/src/robot_trajectory/src/trajectory.cpp.i
+.PHONY : src/robot_trajectory/src/trajectory.cpp.i
+
+src/robot_trajectory/src/trajectory.s: src/robot_trajectory/src/trajectory.cpp.s
+.PHONY : src/robot_trajectory/src/trajectory.s
+
+# target to generate assembly for a file
+src/robot_trajectory/src/trajectory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_trajectory.dir/build.make CMakeFiles/gim_trajectory.dir/src/robot_trajectory/src/trajectory.cpp.s
+.PHONY : src/robot_trajectory/src/trajectory.cpp.s
+
+src/trajectory_simulator_node.o: src/trajectory_simulator_node.cpp.o
+.PHONY : src/trajectory_simulator_node.o
+
+# target to build an object file
+src/trajectory_simulator_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_simulator_node.dir/build.make CMakeFiles/trajectory_simulator_node.dir/src/trajectory_simulator_node.cpp.o
+.PHONY : src/trajectory_simulator_node.cpp.o
+
+src/trajectory_simulator_node.i: src/trajectory_simulator_node.cpp.i
+.PHONY : src/trajectory_simulator_node.i
+
+# target to preprocess a source file
+src/trajectory_simulator_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_simulator_node.dir/build.make CMakeFiles/trajectory_simulator_node.dir/src/trajectory_simulator_node.cpp.i
+.PHONY : src/trajectory_simulator_node.cpp.i
+
+src/trajectory_simulator_node.s: src/trajectory_simulator_node.cpp.s
+.PHONY : src/trajectory_simulator_node.s
+
+# target to generate assembly for a file
+src/trajectory_simulator_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_simulator_node.dir/build.make CMakeFiles/trajectory_simulator_node.dir/src/trajectory_simulator_node.cpp.s
+.PHONY : src/trajectory_simulator_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -288,12 +447,30 @@ help:
 	@echo "... uninstall"
 	@echo "... gim_control_interface"
 	@echo "... gim_control_node"
-	@echo "... src/gim_control_interface.o"
-	@echo "... src/gim_control_interface.i"
-	@echo "... src/gim_control_interface.s"
+	@echo "... gim_kinematics"
+	@echo "... gim_trajectory"
+	@echo "... trajectory_simulator_node"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/robot_hardware/src/gim_control_interface.o"
+	@echo "... src/robot_hardware/src/gim_control_interface.i"
+	@echo "... src/robot_hardware/src/gim_control_interface.s"
+	@echo "... src/robot_kinematic/src/fk.o"
+	@echo "... src/robot_kinematic/src/fk.i"
+	@echo "... src/robot_kinematic/src/fk.s"
+	@echo "... src/robot_kinematic/src/ik.o"
+	@echo "... src/robot_kinematic/src/ik.i"
+	@echo "... src/robot_kinematic/src/ik.s"
+	@echo "... src/robot_kinematic/src/jacobian.o"
+	@echo "... src/robot_kinematic/src/jacobian.i"
+	@echo "... src/robot_kinematic/src/jacobian.s"
+	@echo "... src/robot_trajectory/src/trajectory.o"
+	@echo "... src/robot_trajectory/src/trajectory.i"
+	@echo "... src/robot_trajectory/src/trajectory.s"
+	@echo "... src/trajectory_simulator_node.o"
+	@echo "... src/trajectory_simulator_node.i"
+	@echo "... src/trajectory_simulator_node.s"
 .PHONY : help
 
 

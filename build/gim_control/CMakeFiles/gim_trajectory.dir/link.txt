@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgim_trajectory.a CMakeFiles/gim_trajectory.dir/src/robot_trajectory/src/trajectory.cpp.o
+/usr/bin/ranlib libgim_trajectory.a

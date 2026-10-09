@@ -1,6 +1,6 @@
 # generated from ament_cmake_export_libraries/cmake/template/ament_cmake_export_libraries.cmake.in
 
-set(_exported_libraries "gim_control_interface")
+set(_exported_libraries "gim_control_interface;gim_kinematics;gim_trajectory")
 set(_exported_library_names "")
 
 # populate gim_control_LIBRARIES

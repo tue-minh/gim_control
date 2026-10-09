@@ -1,4 +1,4 @@
-#include <ros2_gim_control/gim_control_interface.hpp>
+#include "gim_control_interface.hpp"
 
 int main(int argc, char *argv[]) {
     rclcpp::init(argc, argv);
