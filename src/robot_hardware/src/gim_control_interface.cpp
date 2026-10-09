@@ -5,6 +5,8 @@
 #include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <cstring>
+#include <cerrno>
+#include <sys/time.h>
 #include <unistd.h>
 #include <thread>
 #include "std_msgs/msg/float32.hpp"
@@ -60,6 +62,12 @@ GimControlInterface::GimControlInterface()
         rclcpp::shutdown();
         return;
     }
+
+    // Receive timeout so the reader thread wakes up periodically and can exit on shutdown.
+    struct timeval rcv_timeout;
+    rcv_timeout.tv_sec = 0;
+    rcv_timeout.tv_usec = 100000;
+    setsockopt(sock_, SOL_SOCKET, SO_RCVTIMEO, &rcv_timeout, sizeof(rcv_timeout));
 
     reader_thread_ = std::thread(&GimControlInterface::read_can_messages, this);
 }
@@ -185,7 +193,7 @@ void GimControlInterface::SendVelocityCommand(int node_id, float velocity) {
     if (write(sock_, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
         RCLCPP_ERROR(this->get_logger(), "Error sending velocity command for motor %d!", node_id);
     } else {
-        RCLCPP_INFO(this->get_logger(), "Sent velocity %.2f to ODrive ID %d", velocity, node_id);
+        RCLCPP_DEBUG(this->get_logger(), "Sent velocity %.2f to ODrive ID %d", velocity, node_id);
     }
 }
 
@@ -200,7 +208,7 @@ void GimControlInterface::SendPositionCommand(int node_id, float position, int16
     if (write(sock_, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
         RCLCPP_ERROR(this->get_logger(), "Error sending position command for motor %d!", node_id);
     } else {
-        RCLCPP_INFO(this->get_logger(), "Sent position %.2f turns to ODrive ID %d", position_in_turns, node_id);
+        RCLCPP_DEBUG(this->get_logger(), "Sent position %.2f turns to ODrive ID %d", position_in_turns, node_id);
     }
 }
 
@@ -212,8 +220,27 @@ void GimControlInterface::SendTorqueCommand(int node_id, float torque) {
     if (write(sock_, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
         RCLCPP_ERROR(this->get_logger(), "Error sending torque command for Node %d!", node_id);
     } else {
-        RCLCPP_INFO(this->get_logger(), "Sent Torque to Node %d: %.5f Nm", node_id, torque);
+        RCLCPP_DEBUG(this->get_logger(), "Sent Torque to Node %d: %.5f Nm", node_id, torque);
     }
+}
+
+void GimControlInterface::DisableMotor(int node_id) {
+    for (int attempt = 0; attempt < 2; ++attempt) {
+        struct can_frame frame;
+        std::memset(&frame, 0, sizeof(frame));
+        float zero_torque = 0.0f;
+        frame.can_id = (node_id << 5) | 0x0E;
+        frame.can_dlc = sizeof(float);
+        std::memcpy(frame.data, &zero_torque, sizeof(float));
+        if (write(sock_, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
+            RCLCPP_ERROR(this->get_logger(), "Error zeroing torque for Node %d!", node_id);
+        }
+        if (send_can_frame(node_id, 0x07, {0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}) < 0) {
+            RCLCPP_ERROR(this->get_logger(), "Error sending AXIS_STATE_IDLE for Node %d!", node_id);
+        }
+        usleep(5000);
+    }
+    RCLCPP_INFO(this->get_logger(), "Node %d disabled (AXIS_STATE_IDLE)", node_id);
 }
 
 void GimControlInterface::ReadEncoder(int node_id) {
@@ -238,6 +265,11 @@ void GimControlInterface::get_torque_data(int node_id, float &torque) {
         torque = 0.0;
         RCLCPP_ERROR(this->get_logger(), "Invalid node_id: %d", node_id);
     }
+}
+
+uint64_t GimControlInterface::encoder_sample_count(int node_id) const {
+    if (node_id < 0 || static_cast<size_t>(node_id) >= encoder_data_.size()) return 0;
+    return encoder_data_[node_id].sample_count;
 }
 
 bool GimControlInterface::has_encoder_data(int node_id) const {
@@ -309,7 +341,9 @@ void GimControlInterface::read_can_messages() {
     while (running_ && rclcpp::ok()) {
         ssize_t nbytes = read(sock_, &frame, sizeof(struct can_frame));
         if (nbytes < 0) {
-            RCLCPP_ERROR(this->get_logger(), "CAN read error!");
+            if (errno == EAGAIN || errno == EWOULDBLOCK || errno == EINTR) continue;  // timeout
+            RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 1000, "CAN read error!");
+            usleep(10000);
             continue;
         }
         if (nbytes != sizeof(struct can_frame))
@@ -342,6 +376,7 @@ void GimControlInterface::process_params(int node_id, uint8_t* data) {
     encoder_data_[node_id].position = pos_estimate;
     encoder_data_[node_id].velocity = vel_estimate;
     encoder_data_[node_id].has_encoder_sample = true;
+    encoder_data_[node_id].sample_count++;
 }
 
 void GimControlInterface::process_torque(int node_id, uint8_t* data) {

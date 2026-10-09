@@ -1,0 +1,73 @@
+[35m[1mConsolidate compiler generated dependencies of target gim_trajectory[0m
+[35m[1mConsolidate compiler generated dependencies of target gim_control_interface[0m
+[35m[1mConsolidate compiler generated dependencies of target gim_kinematics[0m
+[ 14%] Built target gim_trajectory
+[ 28%] Built target gim_control_interface
+[ 57%] Built target gim_kinematics
+[35m[1mConsolidate compiler generated dependencies of target gim_control_node[0m
+[35m[1mConsolidate compiler generated dependencies of target trajectory_simulator_node[0m
+[35m[1mConsolidate compiler generated dependencies of target impedance_simulator_node[0m
+[ 71%] Built target gim_control_node
+[ 78%] [32mBuilding CXX object CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o[0m
+[ 92%] Built target trajectory_simulator_node
+[100%] [32m[1mLinking CXX executable impedance_simulator_node[0m
+[100%] Built target impedance_simulator_node
+-- Install configuration: ""
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.sh
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.dsv
+-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_control_interface.a
+-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_kinematics.a
+-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_trajectory.a
+-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/gim_control_node
+-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/trajectory_simulator_node
+-- Installing: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_simulator_node
+-- Set runtime path of "/home/tue/gim_control/install/gim_control/lib/gim_control/impedance_simulator_node" to ""
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include/gim_control_interface.hpp
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include/fk.hpp
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include/ik.hpp
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include/jacobian.hpp
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include/utils.hpp
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include
+-- Up-to-date: /home/tue/gim_control/install/gim_control/include/trajectory.hpp
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/decomposed
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/upper_arm_link.stl
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/lower_arm_link.stl
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/base_link.stl
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/shoulder_link.stl
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/gim_arm.urdf
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/mujoco_description.xml
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/robot_description_formatted.urdf
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/base_link.STL
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/upper_arm_link.STL
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/lower_arm_link.STL
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/shoulder_link.STL
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch/display.launch.py
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch/mujoco.launch.py
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/rviz
+-- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/rviz/urdf.rviz
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/config
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/config/controllers.yaml
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/package_run_dependencies/gim_control
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/parent_prefix_path/gim_control
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.sh
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.sh
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.dsv
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.bash
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.sh
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.zsh
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.dsv
+-- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/package.dsv
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/packages/gim_control
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig.cmake
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig-version.cmake
+-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/package.xml

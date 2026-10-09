@@ -69,8 +69,8 @@ target_link_libraries(trajectory_simulator_node gim_kinematics gim_trajectory)
 add_executable(impedance_simulator_node
   src/impedance_simulator_node.cpp
 )
-ament_target_dependencies(impedance_simulator_node rclcpp sensor_msgs)
-target_link_libraries(impedance_simulator_node gim_kinematics gim_trajectory)
+ament_target_dependencies(impedance_simulator_node rclcpp std_msgs sensor_msgs)
+target_link_libraries(impedance_simulator_node gim_control_interface)
 
 ament_export_libraries(gim_control_interface gim_kinematics gim_trajectory)
 

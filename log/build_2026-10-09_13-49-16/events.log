@@ -1,0 +1,198 @@
+[0.000000] (-) TimerEvent: {}
+[0.000490] (gim_control) JobQueued: {'identifier': 'gim_control', 'dependencies': OrderedDict()}
+[0.001136] (gim_control) JobStarted: {'identifier': 'gim_control'}
+[0.011540] (gim_control) JobProgress: {'identifier': 'gim_control', 'progress': 'cmake'}
+[0.012426] (gim_control) JobProgress: {'identifier': 'gim_control', 'progress': 'build'}
+[0.013223] (gim_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tue/gim_control/build/gim_control', '--', '-j12', '-l12'], 'cwd': '/home/tue/gim_control/build/gim_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tue'), ('ANTIGRAVITY_SOURCE_METADATA', '{"tool":{"conversationId":"e85e0acc-8d06-4a4b-9c20-4e38eba6e6f0", "stepIndex":19, "toolCall":{"id":"call_464696", "name":"run_command", "argumentsJson":"{\\"CommandLine\\":\\"colcon build --packages-select gim_control\\",\\"Cwd\\":\\"/home/tue/gim_control\\",\\"WaitMsBeforeAsync\\":5000,\\"toolAction\\":\\"Building workspace\\",\\"toolSummary\\":\\"Build gim_control package\\"}", "thinkingSignature":"Et8eCtweAWkUfRM+HC3zgIhPz+JFEOwgvCgb0Rbb7uQTmGLh8ngDKZlUggKsCG18hEL+eRRFvhepGLdOWxerw650ZvksSyXTiPpaBBO8KyXlEmGe1WogEzdStBK5WujeiF0QhNDYFLZiKRMKxIhpHZ2V2XYeq+VSUUDrAw0k/poN3rkZVgfkodXZx1PVxzcrzp21uA9YNtalHGBkGGg+330TtS5CSmuZpOHpOr+uhzagJ5K9Wjqp8gyU+sa6q2LlxyWsUCqhtqXkXRPqXU9l8FHIZ6QSD3qKMPNzCF0IIuKlpSw+KYWfoULM9/JZvZ6AeFbIlGZXYNpfJQCOGDujUVVcjGie1yRwYDP8+5cprGmrbj2JLziWhN2wrpVbgb35QzzqwpsMbrxpmzENV3BD5GQiu97JjMYCugHjwv+J26qR6AR+PksVA+OGGv43RqVwmT5SXPoC0KlpdIU4Jq01aCiwUg7u6Yhvl3QgCtvcZ3PtmcrNQuZ4sFNRkJpzn/EjhREjErBPLFx6O2qjdQf54+yuNU4J5ZV3GoFJYUBwwxQ/a0uEjx0kxLWGn222+/jQfqgQQn9strXP8iCAR0UahLkqoPf2IkHAPt+V9xuIqneAZEP/iYXQdtPydBIh5c+G9F/QTQWqS4PuouhvmedIY5kmO0hO5UeOo7v8e/2ytYB47cbefkDb0JQ7knMqAqc3jX5ZFF0hJOxZzidFQhx1WM2tLtfuWbMaKgy9n1eBCH+dZliU+p3aDPidVNQGgxK4fL0PA7VkrKd5lGaoV+YiAdfM5GaQRtSHJg6NOQFb+g+FOzc4SXTX+3yP6d+BOq2813gKv8+AqVX0mt/IZ82n1NDRe1asLik3giLRj7j+efA0k0T3sosfTS+CK5+IVdobiVwmk1rEXcBWBMior2d5YXpgMfVveQG2AMVX0HXaXINaIuuImLUTQhxNRHFW898ZHlg+kFnf0sA4yHMVsiam0D/e0oEd5b1Jzm/5V7Dm9W7HaJ2kYKB3Y0NJJscmP9hAhpxuLj04o+WiMSEuTcjWynPB0rJowDVyaFtDt6yTA6cEc0WS/Rh5+ojYpzTVGIe9Bm3xfpvlZ9GDY6uOg3WZ57UXjTPxa7p+kN4BVHydyFaHmOoREbMhzeM+QDRn4UnvZX5RWApkvidzMiZwtexL2wJ6xK85e8ATXkMQC8JyD5bwuPIZFjX4uDths89TqkQnn7KlxfYyLUpHiZwJr5BR6jIzEmGB0zo0VgprBUriULuMEfC5+2btrx0TMbFGiWWADkN2ZvyCQyAlIkIilzBvvxMZIXLN2j2nSY9vf43J4uIwyfRuhTJUBVNVOXrTltZu8HtFmm8ZI8nHmGH+qyN93a5qk894036/HU3ncjaYuU4MN1OC/jS6nbHnE5vpHaWwHj4pz6gHITph2Y6DPIL2iHyBr+voxZKu7qM0hqVUGjsbr1D7AAVaPwGOIrBxLP2GV/U1acY6+T2xxiD/8sgcSflyckTOe/VvF1l+Tw8RRnijaeswJaDDH3/hInSsGV+pQ2pjwFTxwpB5BL9IKrRKJZfxiSih4+W4/rEQZKHYlMN62HcfsXJLnhfleAuu3IjFYa7q/QhmIUE2Hdr6TJ37Qtl1ifrDjYsD/J/Nhyu960at7mHHHvHlVDoUdDrl62wt5PnzuLh5xoAhJ1fR87lvO9VG/AqsiDerLcgt31m2u3VcDCv64jvZUCY2CPxHK5AW5n8+PDupYtFZ7wMfK5ddPbFEC7MBzcWwdw3sULS02AQzNbWkkytgVEhVBmcxFaHabECV6v4VADK73AEKNmG4u3O284GLfHLQcL/wimj1BkSLn6IWu+XdQMDtJ+jPEaB1XeMU2zBbKJeaF3T0RWnZ3CqvaCcIm9BznLefUy4B9BIRbH/7Z1FvnWWcNQXCGDis90MpBMD9cekYwus1J3bwqdsxHA2uPb4gAc1S2bJeZbmJVaKnZGvcpbAABJFIDfbE9aoQGpLii34+XmYSRV1uDtpv5n1qSMrdrz9q4xaKvYfktXnwZpQclY+LyI+ojzhtvn7JYSd5lVWie1XiFoGBn2Q0SJ4tsJwtWBIEn84B92Kf9V5FNUKQZGEfDh201rSC0Y8zuxLCoTQxb2BCcYobLz1wYc6JlYzckjvF8AFN59WFuNdGCI9ZeCPaBfyQeACaXiHnWfL8EY1nsO94g6jJ0MuVgsYjNfhUhCFOHCQ7EgsiXpVm0UbmLjVxhGAmuqAaoyveLdyqBe2XlHaVx8/IfA/EIawRWVOO6hchZfFcNDjxv+o8DhQQl02G0osLwvp9g5lI1XhGLjZihLYlhoCWDwjTiica4ZoDJa2tEPeMxUR5Tow+RV2kPngn1diDTc1rFvXV5PjbRDF2LqUYjmQ77IIMvi6IFhXCoFdubuxlJTkJMGl+KtCgdqT5hmnW6nXCGUv32hTE9aEjJam3tgY5zXdmMrEAZ3yIPffd3emDxXYIKO/H7h4qLrL+TChqqo45RskvtfZa0jO3RiTFmILcwhNHj/f2OOwzgpC+qc33rvvaruVBVekxwR2Jk9tEQMKHO7qOW/1mQxY6QsP5qETXvUBGkLLKsq2j1seN1d6YYMdX5NX7MfV4/NJcyhEfMI/CRmEdHnug68JkQtaZOStcvcQVNN5eruf84XMyRRvpZi8Y3etSxbgqwj2G52QwBbEU0ZLonz+sjb8JXS9GVTpWg1OEsvFVlDivEroydB5GqVLDFTdVULVEU2q+q8VxrRvYNu6gcUPqykTqFQEqHzibuKTBEvHV+SyFrtaPZ2nCua0zPLoBAAQ5PPKuFiML0UXqPbcE3saOpEnPAK355VJZaynN5WkjjzY6uJeOlrjpScg2XVGAWV93sJjIJpPz/xzASa5lfRFhyGMQOzEIvVEFTeSEJIH3ES9kTDkXuq+mauhj///nALNlarnYViDZkDOQAuKIwXpI8QZRIdtgeQBjVmTJ/IS7iEwBCmIG45EAifKcJVcRhemPhqvwfgbViGRlcBK+sVGAivpovZvolt6azqQPE3yt1MWkLgR9La8jYBtME0JZN8HqTEuK8XjwKQc3anl02t9EH9ExtStspo6PJdHrIdolofv2EWpHE0pu2bJ3gKdBAuNck2VV1kSH3ELDzrk0uyI2n9mITu03xpTcTo6ory/0SYHoI0o/xjygFEUupcwQpMv82pYcIbeLAWjJMMwK42NtAB5ZIEC0HvExZ9bOS+Gc59jAykSR0EPGVg55HkdqhGr4uY+6Pw89rDWsonL7/pDm3vYIjZKRjLS0XMY3XniAQ7SKtt+UrGLX7JjVn56FPPii/ZJQnCLh8I25D9ATu01/m9VNexYrtpZBpT1pWK7NQ6QhjxDLqqJ7dx4PurlWqxL7SRXU4yQjZ78JSqwIZW1kJXJFDQ46DYypMUui022gZzUvLBBbsSZNf2TPU1GABnbP6pHEpogYG5ikcjTESCnmq8TN+XgFhI3wxlxPQrMi+01N1eE85m0b2Z/BMas75RNHrNEPEGFqxm0gmgr5pzTGZCIJ7Rms2P2tn2ZtQm7CPpVi9GpaFZq5q74RYFVXJfxV/hFK7vsBc3uBe5VfGjr+i92X+GEKlJ3VQuxeSVQmeQDni25HBT53jhLN/LhkkZnmSgah7UN/a29O4yUzLuDAHpZS7lN+GQnFpNm2k+JrA3y0nNkbjqSnixWcBrxLmCue9ptO5oRrpvxLEMmaKofbVLL7/5ZrB2hc84ic8+DgMgOMJdaqmSWKXEUdoGyvCylWSrW9h8HWZtpIkcn5GCxxgJPLD/n2Cn34JQcVAfhRoUioQnI1+X/JbMS+NvulorbITdL3vnAmP9pdJKmK4p4W8lEZW5NroH7FuaHNuw2s51HYcGzk0snzo7CAqFiUbdsEfUapSQawK5/0//3+yV1XE3gBpqbyyTUU8fT5A5rztebywufm7981zPBSMWyPqcGjhpPB0P+YLpvr9OmViELOzVfFLAB6H3PF6WaYzt2OzTK1cNuTtNN0VifgBB9etTMUM38k+pQvJZVIc5Q9wu1SJkn8xS+S0ZfbnkOsYJyz4WGZBIA8b3GOBV7kYcXk1mqBnfiZ1V8xJ38y3SfUpES0WxW23lS8DlOzXu4qljNtRf8eY+5sM2ApGPGJTNsF3LoYwZkIkK2tmToRxGnxKtLC2txj47ZBtM8eJHTRJaQm7SegWAGloxlmOXAFa/xi5RC/+TM+5gRYXbZT94pXZbi8In5tnJ+mmgqEmUjNhrpVsicZhyDXqNpFdM1dFT56HUmuPG4W7XHZOK4k1reec7Ecxkn8VUwR8WlekPLc446CQKz7CE4Ul0Hk2PRUQIYnOOLd8kHhNbjeN6147saDN0kLXkR6n1bmeaoBpMg/P3mp5g3W0kAhHEmvouWxBl+2fFasxHGkifkLic4/mXlMQ1I/P5CjeMTqWW8l1816oyVizcgJQWkCLDKo1xENI7GdywonKor4P1ESkFoYAbHDtYoYWH6R6Ds3TtM8uC3FXutEodkSwjJ5BdkBWsPfsaNInhXdU38kwfyUfQEfA+r3gBcIdRvdr9opVjof12Y0BqUbviQo5f94ZF1ruTUwxLHhaZu8cIl2AuwXMkzxl801ff1LrZXR4TxFShbqdlTBasfosUlR3KSPyhkcMovVJu9kMvv52ZQBEdtn1X78XqUcozo2eAzSO1C7vbK4T9Kf38gbbc6bsIxUrUJmx/Eqr85dqnQaNKkryj/FthZfnTEtn5GgcJhzh6fMPHPMbOmY8n4ZUb04c/gV6aZvmwSVIMdY9S6dvVtvLMPKSqjJmXEtuprsi5fsIOi0ObKVoe945hRR6ykcX6YpiJCRwTjZZM5LjKTxG7RgDt7ZnMj1KSDZr02rUJD7PWf2VNCUuG60wNkL+UiDcZQbVfVZwqQYKPUhDQ+azM0IvpWjAAo6agDsnlDAmpRxTgyWI993TRXL+UPc1mtqJgBLFEeHeGDcMmgdKlRAQiySytb0dKSXMJeZc+PMXreSZjsC6rHV6t7CM+hwR3MNpoaCbe5A/BjVRBkcfs+u+XAT/+k4H2nUodc6Y1/W0jQpSWcds/8DmkTqT7qepjWHp87VMdeISjZzAt9nJpUWCF1BKeNnA5rUbGQfPi8oWU5clSOag/ZkSzF010moK+4e4GJHuW5c0xX0AO6qXDuVbNIZWqaY5G/gW9G/H5TZSMVVYgr52p1r5jI9CliycqmG9hYG8Te6FjN+7f0GpSy5PCnE62K52wps5YU="}}}'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/tue/STM32CubeMX'), ('ANTIGRAVITY_AGENTAPI_EXE', '/home/tue/.local/bin/agy'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/tue/install/rs_control/lib:/home/tue/install/gim_control/lib:/home/tue/rs_control/install/rs_control/lib:/home/tue/gim_control/install/gim_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tue'), ('OLDPWD', '/home/tue'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('MANAGERPID', '1215'), ('SYSTEMD_EXEC_PID', '1756'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7063'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/tue/rs_control/install:/home/tue/install:/home/tue/gim_control/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'tue'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:10744'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tue'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('ANTIGRAVITY_APP_DATA_DIR', '/home/tue/.gemini/antigravity-cli'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_LS_VERSION', 'cli-1.3.2'), ('PATH', '/home/tue/.gemini/antigravity-cli/bin:/home/tue/.local/bin:/home/tue/.npm-global/bin:/opt/ros/humble/bin:/home/tue/.local/bin:/home/tue/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/share/code/bin'), ('SESSION_MANAGER', 'local/tue:@/tmp/.ICE-unix/1528,unix/tue:/tmp/.ICE-unix/1528'), ('INVOCATION_ID', 'd772908f636045c6b93ce92790231e66'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ANTIGRAVITY_CONVERSATION_ID', 'e85e0acc-8d06-4a4b-9c20-4e38eba6e6f0'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/tue/install/rs_control:/home/tue/install/gim_control:/home/tue/rs_control/install/rs_control:/home/tue/gim_control/install/gim_control:/opt/ros/humble'), ('ANTIGRAVITY_PROJECT_ID', 'default-cli-project'), ('SHELL', '/bin/bash'), ('ANTIGRAVITY_LS_ADDRESS', 'localhost:33765'), ('LC_NAME', 'vi_VN'), ('TERMINATOR_UUID', 'urn:uuid:df8d7835-c44f-4a06-9d4c-1f00620f8446'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', '2dfb8025-e5de-45d7-841b-72c0249a4857'), ('PWD', '/home/tue/gim_control/build/gim_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tue/install/rs_control/local/lib/python3.10/dist-packages:/home/tue/rs_control/install/rs_control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ANTIGRAVITY_CSRF_TOKEN', '2490bb76-751c-4433-95d7-8d6acec1c9c0'), ('CMAKE_PREFIX_PATH', '/home/tue/install/rs_control:/home/tue/install/gim_control:/home/tue/rs_control/install/rs_control:/home/tue/gim_control/install/gim_control:/opt/ros/humble')]), 'shell': False}
+[0.064108] (gim_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gim_trajectory\x1b[0m\n'}
+[0.064377] (gim_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gim_control_interface\x1b[0m\n'}
+[0.064684] (gim_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gim_kinematics\x1b[0m\n'}
+[0.091291] (gim_control) StdoutLine: {'line': b'[ 14%] Built target gim_trajectory\n'}
+[0.099579] (-) TimerEvent: {}
+[0.100299] (gim_control) StdoutLine: {'line': b'[ 28%] Built target gim_control_interface\n'}
+[0.100474] (gim_control) StdoutLine: {'line': b'[ 57%] Built target gim_kinematics\n'}
+[0.119844] (gim_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gim_control_node\x1b[0m\n'}
+[0.129463] (gim_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target trajectory_simulator_node\x1b[0m\n'}
+[0.134459] (gim_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target impedance_simulator_node\x1b[0m\n'}
+[0.159313] (gim_control) StdoutLine: {'line': b'[ 71%] Built target gim_control_node\n'}
+[0.166272] (gim_control) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o\x1b[0m\n'}
+[0.171996] (gim_control) StdoutLine: {'line': b'[ 92%] Built target trajectory_simulator_node\n'}
+[0.199689] (-) TimerEvent: {}
+[0.299980] (-) TimerEvent: {}
+[0.400350] (-) TimerEvent: {}
+[0.500765] (-) TimerEvent: {}
+[0.601538] (-) TimerEvent: {}
+[0.706234] (-) TimerEvent: {}
+[0.806596] (-) TimerEvent: {}
+[0.906980] (-) TimerEvent: {}
+[1.009616] (-) TimerEvent: {}
+[1.109966] (-) TimerEvent: {}
+[1.210301] (-) TimerEvent: {}
+[1.310642] (-) TimerEvent: {}
+[1.411010] (-) TimerEvent: {}
+[1.511369] (-) TimerEvent: {}
+[1.611678] (-) TimerEvent: {}
+[1.712078] (-) TimerEvent: {}
+[1.812482] (-) TimerEvent: {}
+[1.912881] (-) TimerEvent: {}
+[2.013263] (-) TimerEvent: {}
+[2.113640] (-) TimerEvent: {}
+[2.214006] (-) TimerEvent: {}
+[2.314478] (-) TimerEvent: {}
+[2.414905] (-) TimerEvent: {}
+[2.515343] (-) TimerEvent: {}
+[2.615819] (-) TimerEvent: {}
+[2.716272] (-) TimerEvent: {}
+[2.816676] (-) TimerEvent: {}
+[2.917052] (-) TimerEvent: {}
+[3.017419] (-) TimerEvent: {}
+[3.117780] (-) TimerEvent: {}
+[3.218103] (-) TimerEvent: {}
+[3.318438] (-) TimerEvent: {}
+[3.418829] (-) TimerEvent: {}
+[3.519226] (-) TimerEvent: {}
+[3.619603] (-) TimerEvent: {}
+[3.719996] (-) TimerEvent: {}
+[3.820388] (-) TimerEvent: {}
+[3.920731] (-) TimerEvent: {}
+[4.021088] (-) TimerEvent: {}
+[4.121501] (-) TimerEvent: {}
+[4.221862] (-) TimerEvent: {}
+[4.322287] (-) TimerEvent: {}
+[4.422727] (-) TimerEvent: {}
+[4.523242] (-) TimerEvent: {}
+[4.623658] (-) TimerEvent: {}
+[4.724063] (-) TimerEvent: {}
+[4.824505] (-) TimerEvent: {}
+[4.924922] (-) TimerEvent: {}
+[5.025345] (-) TimerEvent: {}
+[5.125670] (-) TimerEvent: {}
+[5.226134] (-) TimerEvent: {}
+[5.326558] (-) TimerEvent: {}
+[5.426946] (-) TimerEvent: {}
+[5.527308] (-) TimerEvent: {}
+[5.627625] (-) TimerEvent: {}
+[5.728135] (-) TimerEvent: {}
+[5.828841] (-) TimerEvent: {}
+[5.929271] (-) TimerEvent: {}
+[6.029871] (-) TimerEvent: {}
+[6.130254] (-) TimerEvent: {}
+[6.230582] (-) TimerEvent: {}
+[6.330932] (-) TimerEvent: {}
+[6.431357] (-) TimerEvent: {}
+[6.531762] (-) TimerEvent: {}
+[6.632133] (-) TimerEvent: {}
+[6.732540] (-) TimerEvent: {}
+[6.832887] (-) TimerEvent: {}
+[6.933232] (-) TimerEvent: {}
+[7.033679] (-) TimerEvent: {}
+[7.134044] (-) TimerEvent: {}
+[7.234442] (-) TimerEvent: {}
+[7.334836] (-) TimerEvent: {}
+[7.435207] (-) TimerEvent: {}
+[7.535537] (-) TimerEvent: {}
+[7.635947] (-) TimerEvent: {}
+[7.736331] (-) TimerEvent: {}
+[7.836655] (-) TimerEvent: {}
+[7.937042] (-) TimerEvent: {}
+[8.037457] (-) TimerEvent: {}
+[8.137864] (-) TimerEvent: {}
+[8.238247] (-) TimerEvent: {}
+[8.338623] (-) TimerEvent: {}
+[8.438997] (-) TimerEvent: {}
+[8.539415] (-) TimerEvent: {}
+[8.639803] (-) TimerEvent: {}
+[8.740189] (-) TimerEvent: {}
+[8.840503] (-) TimerEvent: {}
+[8.940886] (-) TimerEvent: {}
+[9.041347] (-) TimerEvent: {}
+[9.141794] (-) TimerEvent: {}
+[9.242188] (-) TimerEvent: {}
+[9.342564] (-) TimerEvent: {}
+[9.442888] (-) TimerEvent: {}
+[9.543275] (-) TimerEvent: {}
+[9.643582] (-) TimerEvent: {}
+[9.744029] (-) TimerEvent: {}
+[9.844448] (-) TimerEvent: {}
+[9.944888] (-) TimerEvent: {}
+[10.045227] (-) TimerEvent: {}
+[10.145537] (-) TimerEvent: {}
+[10.245895] (-) TimerEvent: {}
+[10.346273] (-) TimerEvent: {}
+[10.446623] (-) TimerEvent: {}
+[10.547071] (-) TimerEvent: {}
+[10.635818] (gim_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable impedance_simulator_node\x1b[0m\n'}
+[10.647239] (-) TimerEvent: {}
+[10.747641] (-) TimerEvent: {}
+[10.848112] (-) TimerEvent: {}
+[10.948564] (-) TimerEvent: {}
+[11.048912] (-) TimerEvent: {}
+[11.149269] (-) TimerEvent: {}
+[11.249703] (-) TimerEvent: {}
+[11.350103] (-) TimerEvent: {}
+[11.371544] (gim_control) StdoutLine: {'line': b'[100%] Built target impedance_simulator_node\n'}
+[11.385433] (gim_control) CommandEnded: {'returncode': 0}
+[11.386020] (gim_control) JobProgress: {'identifier': 'gim_control', 'progress': 'install'}
+[11.396706] (gim_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tue/gim_control/build/gim_control'], 'cwd': '/home/tue/gim_control/build/gim_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tue'), ('ANTIGRAVITY_SOURCE_METADATA', '{"tool":{"conversationId":"e85e0acc-8d06-4a4b-9c20-4e38eba6e6f0", "stepIndex":19, "toolCall":{"id":"call_464696", "name":"run_command", "argumentsJson":"{\\"CommandLine\\":\\"colcon build --packages-select gim_control\\",\\"Cwd\\":\\"/home/tue/gim_control\\",\\"WaitMsBeforeAsync\\":5000,\\"toolAction\\":\\"Building workspace\\",\\"toolSummary\\":\\"Build gim_control package\\"}", "thinkingSignature":"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"}}}'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/tue/STM32CubeMX'), ('ANTIGRAVITY_AGENTAPI_EXE', '/home/tue/.local/bin/agy'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/tue/install/rs_control/lib:/home/tue/install/gim_control/lib:/home/tue/rs_control/install/rs_control/lib:/home/tue/gim_control/install/gim_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tue'), ('OLDPWD', '/home/tue'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('MANAGERPID', '1215'), ('SYSTEMD_EXEC_PID', '1756'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7063'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/tue/rs_control/install:/home/tue/install:/home/tue/gim_control/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'tue'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:10744'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tue'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('ANTIGRAVITY_APP_DATA_DIR', '/home/tue/.gemini/antigravity-cli'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_LS_VERSION', 'cli-1.3.2'), ('PATH', '/home/tue/.gemini/antigravity-cli/bin:/home/tue/.local/bin:/home/tue/.npm-global/bin:/opt/ros/humble/bin:/home/tue/.local/bin:/home/tue/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/share/code/bin'), ('SESSION_MANAGER', 'local/tue:@/tmp/.ICE-unix/1528,unix/tue:/tmp/.ICE-unix/1528'), ('INVOCATION_ID', 'd772908f636045c6b93ce92790231e66'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ANTIGRAVITY_CONVERSATION_ID', 'e85e0acc-8d06-4a4b-9c20-4e38eba6e6f0'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/tue/install/rs_control:/home/tue/install/gim_control:/home/tue/rs_control/install/rs_control:/home/tue/gim_control/install/gim_control:/opt/ros/humble'), ('ANTIGRAVITY_PROJECT_ID', 'default-cli-project'), ('SHELL', '/bin/bash'), ('ANTIGRAVITY_LS_ADDRESS', 'localhost:33765'), ('LC_NAME', 'vi_VN'), ('TERMINATOR_UUID', 'urn:uuid:df8d7835-c44f-4a06-9d4c-1f00620f8446'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', '2dfb8025-e5de-45d7-841b-72c0249a4857'), ('PWD', '/home/tue/gim_control/build/gim_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tue/install/rs_control/local/lib/python3.10/dist-packages:/home/tue/rs_control/install/rs_control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ANTIGRAVITY_CSRF_TOKEN', '2490bb76-751c-4433-95d7-8d6acec1c9c0'), ('CMAKE_PREFIX_PATH', '/home/tue/install/rs_control:/home/tue/install/gim_control:/home/tue/rs_control/install/rs_control:/home/tue/gim_control/install/gim_control:/opt/ros/humble')]), 'shell': False}
+[11.404737] (gim_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.405054] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.sh\n'}
+[11.405127] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.dsv\n'}
+[11.405225] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_control_interface.a\n'}
+[11.405279] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_kinematics.a\n'}
+[11.405327] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_trajectory.a\n'}
+[11.405387] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/gim_control_node\n'}
+[11.405476] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/trajectory_simulator_node\n'}
+[11.405692] (gim_control) StdoutLine: {'line': b'-- Installing: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_simulator_node\n'}
+[11.416046] (gim_control) StdoutLine: {'line': b'-- Set runtime path of "/home/tue/gim_control/install/gim_control/lib/gim_control/impedance_simulator_node" to ""\n'}
+[11.416595] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include\n'}
+[11.416881] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/gim_control_interface.hpp\n'}
+[11.417003] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include\n'}
+[11.417099] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/fk.hpp\n'}
+[11.417216] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/ik.hpp\n'}
+[11.417329] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/jacobian.hpp\n'}
+[11.417439] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/utils.hpp\n'}
+[11.417532] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include\n'}
+[11.417585] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/trajectory.hpp\n'}
+[11.417635] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf\n'}
+[11.417717] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets\n'}
+[11.417804] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/decomposed\n'}
+[11.417891] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full\n'}
+[11.417941] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/upper_arm_link.stl\n'}
+[11.417991] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/lower_arm_link.stl\n'}
+[11.418040] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/base_link.stl\n'}
+[11.418100] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/shoulder_link.stl\n'}
+[11.418150] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/gim_arm.urdf\n'}
+[11.418223] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/mujoco_description.xml\n'}
+[11.418282] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/robot_description_formatted.urdf\n'}
+[11.418329] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes\n'}
+[11.418375] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/base_link.STL\n'}
+[11.418421] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/upper_arm_link.STL\n'}
+[11.418466] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/lower_arm_link.STL\n'}
+[11.418512] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/shoulder_link.STL\n'}
+[11.418561] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch\n'}
+[11.418627] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch/display.launch.py\n'}
+[11.418676] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch/mujoco.launch.py\n'}
+[11.418726] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/rviz\n'}
+[11.418774] (gim_control) StdoutLine: {'line': b'-- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/rviz/urdf.rviz\n'}
+[11.418823] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/config\n'}
+[11.418871] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/config/controllers.yaml\n'}
+[11.418919] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/package_run_dependencies/gim_control\n'}
+[11.418967] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/parent_prefix_path/gim_control\n'}
+[11.419015] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.sh\n'}
+[11.419064] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.dsv\n'}
+[11.419115] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.sh\n'}
+[11.419163] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.dsv\n'}
+[11.419235] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.bash\n'}
+[11.419286] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.sh\n'}
+[11.419334] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.zsh\n'}
+[11.419381] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.dsv\n'}
+[11.419430] (gim_control) StdoutLine: {'line': b'-- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/package.dsv\n'}
+[11.419482] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/packages/gim_control\n'}
+[11.419546] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.419719] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.419790] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig.cmake\n'}
+[11.419845] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig-version.cmake\n'}
+[11.420135] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/package.xml\n'}
+[11.420541] (gim_control) CommandEnded: {'returncode': 0}
+[11.435747] (gim_control) JobEnded: {'identifier': 'gim_control', 'rc': 0}
+[11.436430] (-) EventReactorShutdown: {}

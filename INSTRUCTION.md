@@ -1,7 +1,7 @@
 # ROS2 gim_control Project
 
 ## Overview
-This package provides a C++ ROS2 Humble library for controlling the GIM6010-8 motor via CAN bus. It wraps the ODrive interface functionality, provides a clean ROS2 API for motor control, and includes full robot descriptions (3-DOF arm), physics simulation (MuJoCo), and trajectory/impedance simulation nodes.
+This package provides a C++ ROS2 Humble library for controlling the GIM6010-8 motor via CAN bus. It wraps the ODrive interface functionality, provides a clean ROS2 API for motor control, and includes full robot descriptions (3-DOF arm), physics simulation (MuJoCo), a trajectory visualiser, and a real-hardware impedance controller node.
 
 ## Package Structure
 ```text
@@ -11,12 +11,12 @@ This package provides a C++ ROS2 Humble library for controlling the GIM6010-8 mo
 ├── include/ros2_gim_control/
 │   └── gim_control_interface.hpp  # CAN control header file
 ├── src/
-│   ├── robot_hardware/            # CAN interface implementations
+│   ├── robot_hardware/            # CAN interface (GimControlInterface)
 │   ├── robot_kinematic/           # FK, IK, and Jacobian libraries
 │   ├── robot_trajectory/          # Trajectory generation and CSV files
 │   ├── robot_description/         # URDF, meshes, launch files, RViz configs
 │   ├── trajectory_simulator_node.cpp # CSV Trajectory runner 
-│   ├── impedance_simulator_node.cpp  # Impedance control simulator
+│   ├── impedance_simulator_node.cpp  # Real-hardware impedance controller (CAN)
 │   └── main.cpp                   # Main hardware node execution
 └── reference/              # Reference ODrive interface (existing)
 ```
@@ -50,29 +50,17 @@ To visualize the pre-computed CSV trajectory (`gim_arm_circle_traj.csv`) in RViz
    ```
 *Note: If you just want to manually pose the robot with sliders, run `ros2 launch gim_control display.launch.py` (gui defaults to true).*
 
-### Option 2: MuJoCo Physics & Impedance Control Simulation
-The `impedance_simulator_node` computes joint efforts based on a PD control law: 
-`tau = Kp * (q_des - q_act) + Kd * (qd_des - qd_act)`
+### Option 2: MuJoCo Physics Simulation
+> [!NOTE]
+> `impedance_simulator_node` now drives the **real** motors (see Option 4) and no longer publishes to `/arm_effort_controller/commands`. For simulation, launch MuJoCo and drive it with `arm_controller` (Option 3).
 
-It reads the CSV trajectory, subscribes to `/joint_states` (from MuJoCo), and publishes the resulting torque to `/arm_effort_controller/commands`.
-
-1. Launch the robot in the MuJoCo physics engine. (Note: `arm_effort_controller` is loaded as active by default):
+Launch the robot in the MuJoCo physics engine (`arm_effort_controller` is loaded as active by default):
    ```bash
    ros2 launch gim_control mujoco.launch.py
    ```
-2. In another terminal, run the impedance node to drive the simulated robot:
-   ```bash
-   ros2 run gim_control impedance_simulator_node
-   ```
-
-**Dynamic Parameter Updates:**
-You can dynamically adjust the `Kp` and `Kd` gains while the node is running by publishing to `/impedance_gains` (`std_msgs/msg/Float64MultiArray`).
-```bash
-ros2 topic pub --once /impedance_gains std_msgs/msg/Float64MultiArray "{data: [20.0, 20.0, 20.0, 2.0, 2.0, 2.0]}"
-```
 
 ### Option 3: Trajectory Control in MuJoCo
-If you prefer to use the standard ROS 2 position trajectory controller instead of the impedance node, you can switch the active controllers:
+To use the standard ROS 2 position trajectory controller in simulation, switch the active controllers:
 ```bash
 ros2 control set_controller_state arm_effort_controller inactive
 ros2 control set_controller_state arm_controller active
@@ -89,7 +77,81 @@ ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/actio
 }"
 ```
 
-### Option 4: Real Hardware / Direct CAN Control
+### Option 4: Real Hardware Impedance Control (`impedance_simulator_node`)
+`impedance_simulator_node` drives the **real** motors over `can0` through `GimControlInterface`:
+`tau = Kp * (q_ref - q) + Kd * (qd_ref - qd)` (joint space, Nm), sent in torque mode.
+
+> [!WARNING]
+> Bring `can0` up first. The defaults (gains, gear ratios, signs) are unverified placeholders: check the sign/scale of `/gim/joint_states` by moving the arm by hand with motors disabled, and test with small gains and the arm free to move. There is no gravity compensation.
+
+**Behaviour**
+- Starts with all motors **DISABLED** (idle). It only publishes feedback until you enable it.
+- Enabling takes about 10 s (`InitTorqueMode` sleeps per motor); it runs in a worker thread so feedback keeps publishing.
+- The reference starts at the current arm pose and moves at `max_speed` (rad/s) toward the target, so the arm never jumps. Targets are clamped to the URDF joint limits.
+- Ctrl-C / SIGTERM: torque is zeroed and every motor is set to idle before exit.
+- Faults (no encoder reply for `encoder_timeout` s, or a joint > 0.3 rad outside limits) disable all motors and are reported on `/gim/status`.
+
+**Run**
+```bash
+ros2 run gim_control impedance_simulator_node
+ros2 topic echo /gim/joint_states          # measured joint angles (rad)
+```
+
+**Enable modes** (`/gim/mode`, `std_msgs/String`)
+```bash
+# 1) follow joint_state_publisher_gui  (also run: ros2 launch gim_control display.launch.py)
+ros2 topic pub --once /gim/mode std_msgs/msg/String "{data: gui}"
+# 2) follow the CSV trajectory (first moves slowly to the start pose, then plays it)
+ros2 topic pub --once /gim/mode std_msgs/msg/String "{data: trajectory}"
+# disable all motors
+ros2 topic pub --once /gim/mode std_msgs/msg/String "{data: disable}"
+```
+Switching between `gui` and `trajectory` while enabled does not re-initialise the motors.
+
+**Topics**
+
+| Topic | Type | Direction | Description |
+|---|---|---|---|
+| `/gim/mode` | `std_msgs/String` | sub | `disable` \| `gui` \| `trajectory` |
+| `/impedance_gains` | `Float64MultiArray` | sub | `[kp0 kp1 kp2 kd0 kd1 kd2]` |
+| `/gim/torque_limit` | `Float64MultiArray` | sub | `[t0 t1 t2]` joint torque limit (Nm) |
+| `/gim/max_speed` | `std_msgs/Float64` | sub | reference slew speed (rad/s) |
+| `/gim/set_zero` | `std_msgs/Empty` | sub | take current pose as joint zero (only while disabled) |
+| `/joint_states` (`gui_topic`) | `sensor_msgs/JointState` | sub | GUI target (from `joint_state_publisher_gui`) |
+| `/gim/joint_states` | `sensor_msgs/JointState` | pub | measured angle (rad), velocity, commanded torque |
+| `/gim/motor_raw` | `Float64MultiArray` | pub | `[turns0..2, turns/s0..2]` raw encoder values |
+| `/gim/status` | `std_msgs/String` | pub | `DISABLED` \| `ENABLING` \| `GUI` \| `TRAJECTORY` (+ last fault) |
+
+```bash
+ros2 topic pub --once /impedance_gains std_msgs/msg/Float64MultiArray "{data: [5,10,5, 0.2,0.4,0.2]}"
+ros2 topic pub --once /gim/torque_limit std_msgs/msg/Float64MultiArray "{data: [5,40,5]}"
+ros2 topic pub --once /gim/max_speed std_msgs/msg/Float64 "{data: 0.3}"
+ros2 topic pub --once /gim/set_zero std_msgs/msg/Empty "{}"
+```
+
+**Parameters** (`ros2 run ... --ros-args -p name:=value`)
+
+| Parameter | Default | Description |
+|---|---|---|
+| `node_ids` | `[0,1,2]` | CAN node id per joint |
+| `joint_names` | `[base_joint, shoulder_joint, elbow_joint]` | joint names |
+| `gear_ratio` | `[8,64,8]` | rotor turns per joint turn |
+| `invert_direction` | `[true,false,true]` | flips position/velocity sign |
+| `torque_sign` | `[-1,1,-1]` | sign applied to the motor torque command |
+| `torque_gear_ratio` | `[1,8,1]` | motor torque = joint torque / ratio |
+| `torque_limit` | `[5,40,5]` | joint torque saturation (Nm) |
+| `joint_lower` / `joint_upper` | URDF limits | reference clamp (rad) |
+| `kp` / `kd` | `[5,10,5]` / `[0.2,0.4,0.2]` | impedance gains |
+| `max_speed` | `0.3` | reference slew speed (rad/s) |
+| `control_rate_hz` | `100` | control loop rate |
+| `encoder_timeout` | `0.2` | encoder watchdog (s) |
+| `loop_trajectory` | `false` | loop CSV trajectory (otherwise hold last pose) |
+| `gui_topic` | `/joint_states` | GUI target topic |
+| `csv_file_path` | `.../gim_arm_circle_traj.csv` | trajectory CSV |
+
+Joint zero is the encoder value at power-on unless you call `/gim/set_zero`.
+
+### Option 5: Real Hardware / Direct CAN Control (raw interface)
 Combine the robot description with the real motor control node:
 ```bash
 ros2 launch gim_control gim_control.launch.py
@@ -123,11 +185,17 @@ Initializes the node, opens CAN socket (can0), and starts the CAN reader thread.
 - `InitTorqueMode(int node_id)` - Initialize torque control mode
 - `SendTorqueCommand(int node_id, float torque)` - Send torque command (Nm)
 
+**Disabling:**
+- `DisableMotor(int node_id)` - Zero the torque command and set `AXIS_STATE_IDLE`. Non-blocking (no sleeps), safe to call from shutdown paths. Sent twice for reliability.
+
 **Reading Data:**
 - `ReadEncoder(int node_id)` - Request encoder data via CAN
-- `get_encoder_data(int node_id, float &pos, float &vel)` - Get position and velocity
+- `get_encoder_data(int node_id, float &pos, float &vel)` - Get position (turns) and velocity (turns/s)
 - `get_torque_data(int node_id, float &torque)` - Get measured torque
 - `has_encoder_data(int node_id) const` - Check if encoder data is available
+- `encoder_sample_count(int node_id) const` - Number of encoder replies received so far (freshness watchdog)
+
+*Notes: per-command `Send*Command` logs are at DEBUG level (they run at control-loop rate). The CAN reader uses a 100 ms receive timeout so it exits cleanly on shutdown.*
 
 **PID & Trajectory Limits:**
 - `SetPIDGains(int node_id, float pos_gain, float vel_gain, float vel_integrator_gain)` - Set PID gains

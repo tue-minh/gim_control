@@ -10,6 +10,8 @@
 #include <cstring>
 #include <unistd.h>
 #include <thread>
+#include <atomic>
+#include <cstdint>
 #include <vector>
 #include <unordered_map>
 #include <std_msgs/msg/float32.hpp>
@@ -31,10 +33,15 @@ public:
     void SendVelocityCommand(int node_id, float velocity);
     void SendPositionCommand(int node_id, float position, int16_t vel_ff = 0, int16_t torque_ff = 0);
     void SendTorqueCommand(int node_id, float torque);
+    // Zero the torque command and put the axis into AXIS_STATE_IDLE (motor disabled).
+    // Non-blocking (no sleeps) so it is safe to call from shutdown paths.
+    void DisableMotor(int node_id);
     void ReadEncoder(int node_id);
     void get_encoder_data(int node_id, float &pos, float &vel);
     void get_torque_data(int node_id, float &torque);
     bool has_encoder_data(int node_id) const;
+    // Number of encoder replies received so far (used as a freshness watchdog).
+    uint64_t encoder_sample_count(int node_id) const;
 
     void SetPosGain(int node_id, float pos_gain);
     void SetVelGains(int node_id, float vel_gain, float vel_integrator_gain);
@@ -48,11 +55,12 @@ private:
         float velocity = 0.0;
         float torque = 0.0;
         bool has_encoder_sample = false;
+        uint64_t sample_count = 0;
     };
 
     int sock_;
     std::thread reader_thread_;
-    bool running_;
+    std::atomic<bool> running_;
     std::vector<EncoderData> encoder_data_;
     rclcpp::TimerBase::SharedPtr timer_;
     std::unordered_map<int, rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr> torque_publishers_;

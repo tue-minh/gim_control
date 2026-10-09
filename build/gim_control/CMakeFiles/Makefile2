@@ -273,8 +273,7 @@ CMakeFiles/trajectory_simulator_node.dir/clean:
 # Target rules for target CMakeFiles/impedance_simulator_node.dir
 
 # All Build rule for target.
-CMakeFiles/impedance_simulator_node.dir/all: CMakeFiles/gim_kinematics.dir/all
-CMakeFiles/impedance_simulator_node.dir/all: CMakeFiles/gim_trajectory.dir/all
+CMakeFiles/impedance_simulator_node.dir/all: CMakeFiles/gim_control_interface.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tue/gim_control/build/gim_control/CMakeFiles --progress-num=11,12 "Built target impedance_simulator_node"
@@ -282,7 +281,7 @@ CMakeFiles/impedance_simulator_node.dir/all: CMakeFiles/gim_trajectory.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/impedance_simulator_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/impedance_simulator_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tue/gim_control/build/gim_control/CMakeFiles 0
 .PHONY : CMakeFiles/impedance_simulator_node.dir/rule
