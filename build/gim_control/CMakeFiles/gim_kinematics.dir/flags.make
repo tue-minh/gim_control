@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/tue/gim_control/src/robot_kinematic/include -isystem /usr/include/eigen3
 
-CXX_FLAGS = -Wall -Wextra -Wpedantic
+CXX_FLAGS = -O3 -DNDEBUG -Wall -Wextra -Wpedantic -std=gnu++17
 

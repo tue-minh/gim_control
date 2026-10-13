@@ -1,0 +1,366 @@
+[0.000000] (-) TimerEvent: {}
+[0.000680] (gim_control) JobQueued: {'identifier': 'gim_control', 'dependencies': OrderedDict()}
+[0.000773] (gim_control) JobStarted: {'identifier': 'gim_control'}
+[0.011259] (gim_control) JobProgress: {'identifier': 'gim_control', 'progress': 'cmake'}
+[0.011925] (gim_control) JobProgress: {'identifier': 'gim_control', 'progress': 'build'}
+[0.012720] (gim_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tue/gim_control/build/gim_control', '--', '-j12', '-l12'], 'cwd': '/home/tue/gim_control/build/gim_control', 'env': OrderedDict([('JJ_PAGER', 'cat'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tue'), ('ANTIGRAVITY_SOURCE_METADATA', '{"tool":{"conversationId":"873f0c2e-f775-4e3e-8eae-e05990542eea","stepIndex":32,"toolCall":{"id":"call_244852","name":"run_command","argumentsJson":"{\\"CommandLine\\":\\"colcon build --packages-select gim_control\\",\\"Cwd\\":\\"/home/tue/gim_control\\",\\"IsDaemon\\":false,\\"WaitMsBeforeAsync\\":10000,\\"toolAction\\":\\"Testing build with restored file\\",\\"toolSummary\\":\\"Test colcon build\\"}","thinkingSignature":"EuIBCt8BAWkUfRMYRYZH3FphWelhsCWikKtwnqQhhfv019dVnAmg1DSD6bhIQD1qpGRnlRh5YU8ZUdDBe7zwzkfLqvo+7knOb97ynARiGVRqNCJceyvduFG9zYRbMypptUS0S+lXWXftJ4tsRezsyJ7wwGmFWLNmxhxo0tPXIbJyHVzr0FzPHJeltYtY6jPVCR3EhVwyR2L/osIvM1Jd3rhAkCtHZA+XJ77Qf5/Y+ZHYNxSViXhAamNlI2hGcSrl0dtWAI1Yza+dKkVdalkP7GtwjZDaL4mKSQ4S4LD74Y7pGYA4AQ=="}}}'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/tue/STM32CubeMX'), ('ANTIGRAVITY_AGENTAPI_EXE', '/home/tue/.local/bin/agy'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/tue/gim_control/install/gim_control/lib:/home/tue/rs_control/install/rs_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tue'), ('OLDPWD', '/home/tue'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/tue/.nvm/versions/node/v22.23.3/bin'), ('NVM_INC', '/home/tue/.nvm/versions/node/v22.23.3/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('MANAGERPID', '1222'), ('SYSTEMD_EXEC_PID', '1775'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '172386'), ('NVM_DIR', '/home/tue/.nvm'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/tue/rs_control/install:/home/tue/gim_control/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'tue'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:10100'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tue'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('ANTIGRAVITY_APP_DATA_DIR', '/home/tue/.gemini/antigravity-cli'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_LS_VERSION', 'cli-1.3.4'), ('PATH', '/home/tue/.gemini/antigravity-cli/bin:/home/tue/.nvm/versions/node/v22.23.3/bin:/home/tue/.local/bin:/home/tue/.npm-global/bin:/opt/ros/humble/bin:/home/tue/.local/bin:/home/tue/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/share/code/bin'), ('SESSION_MANAGER', 'local/tue:@/tmp/.ICE-unix/1536,unix/tue:/tmp/.ICE-unix/1536'), ('INVOCATION_ID', '711ecaf922064bfa98bbda35ef67724c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ANTIGRAVITY_CONVERSATION_ID', '873f0c2e-f775-4e3e-8eae-e05990542eea'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/tue/gim_control/install/gim_control:/home/tue/rs_control/install/rs_control:/opt/ros/humble'), ('ANTIGRAVITY_PROJECT_ID', 'default-cli-project'), ('SHELL', '/bin/bash'), ('ANTIGRAVITY_LS_ADDRESS', 'localhost:46497'), ('LC_NAME', 'vi_VN'), ('TERMINATOR_UUID', 'urn:uuid:7e925ad2-466a-409d-bf38-c9429f56aac1'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', 'c069d41d-1721-4fc2-b015-cfec2981ba17'), ('PWD', '/home/tue/gim_control/build/gim_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tue/rs_control/install/rs_control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ANTIGRAVITY_CSRF_TOKEN', '0762fe7b-cf5a-4053-bcc4-138cfd880b5a'), ('CMAKE_PREFIX_PATH', '/home/tue/gim_control/install/gim_control:/home/tue/rs_control/install/rs_control:/opt/ros/humble')]), 'shell': False}
+[0.081571] (gim_control) StdoutLine: {'line': b'[ 38%] Built target gim_control_interface\n'}
+[0.081849] (gim_control) StdoutLine: {'line': b'[ 38%] Built target gim_trajectory\n'}
+[0.081920] (gim_control) StdoutLine: {'line': b'[ 44%] Built target gim_kinematics\n'}
+[0.088083] (gim_control) StdoutLine: {'line': b'[ 55%] Built target impedance_tuner_node\n'}
+[0.099798] (-) TimerEvent: {}
+[0.112935] (gim_control) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o\x1b[0m\n'}
+[0.113205] (gim_control) StdoutLine: {'line': b'[ 72%] Built target gim_control_node\n'}
+[0.114514] (gim_control) StdoutLine: {'line': b'[ 83%] Built target impedance_control_node\n'}
+[0.122336] (gim_control) StdoutLine: {'line': b'[ 94%] Built target trajectory_simulator_node\n'}
+[0.199939] (-) TimerEvent: {}
+[0.300346] (-) TimerEvent: {}
+[0.400692] (-) TimerEvent: {}
+[0.501017] (-) TimerEvent: {}
+[0.601429] (-) TimerEvent: {}
+[0.701783] (-) TimerEvent: {}
+[0.802210] (-) TimerEvent: {}
+[0.902567] (-) TimerEvent: {}
+[1.003366] (-) TimerEvent: {}
+[1.104285] (-) TimerEvent: {}
+[1.205196] (-) TimerEvent: {}
+[1.305841] (-) TimerEvent: {}
+[1.406616] (-) TimerEvent: {}
+[1.507096] (-) TimerEvent: {}
+[1.607639] (-) TimerEvent: {}
+[1.707981] (-) TimerEvent: {}
+[1.808453] (-) TimerEvent: {}
+[1.908878] (-) TimerEvent: {}
+[2.009381] (-) TimerEvent: {}
+[2.109814] (-) TimerEvent: {}
+[2.210542] (-) TimerEvent: {}
+[2.310963] (-) TimerEvent: {}
+[2.411350] (-) TimerEvent: {}
+[2.511713] (-) TimerEvent: {}
+[2.612078] (-) TimerEvent: {}
+[2.712406] (-) TimerEvent: {}
+[2.812739] (-) TimerEvent: {}
+[2.913050] (-) TimerEvent: {}
+[3.013376] (-) TimerEvent: {}
+[3.113687] (-) TimerEvent: {}
+[3.213997] (-) TimerEvent: {}
+[3.314331] (-) TimerEvent: {}
+[3.414665] (-) TimerEvent: {}
+[3.515019] (-) TimerEvent: {}
+[3.615436] (-) TimerEvent: {}
+[3.715845] (-) TimerEvent: {}
+[3.816197] (-) TimerEvent: {}
+[3.916511] (-) TimerEvent: {}
+[4.016830] (-) TimerEvent: {}
+[4.117156] (-) TimerEvent: {}
+[4.217494] (-) TimerEvent: {}
+[4.317862] (-) TimerEvent: {}
+[4.418221] (-) TimerEvent: {}
+[4.518560] (-) TimerEvent: {}
+[4.618906] (-) TimerEvent: {}
+[4.719254] (-) TimerEvent: {}
+[4.819587] (-) TimerEvent: {}
+[4.919947] (-) TimerEvent: {}
+[5.020244] (-) TimerEvent: {}
+[5.120619] (-) TimerEvent: {}
+[5.220960] (-) TimerEvent: {}
+[5.321294] (-) TimerEvent: {}
+[5.421696] (-) TimerEvent: {}
+[5.522066] (-) TimerEvent: {}
+[5.622375] (-) TimerEvent: {}
+[5.722694] (-) TimerEvent: {}
+[5.823008] (-) TimerEvent: {}
+[5.923366] (-) TimerEvent: {}
+[6.023694] (-) TimerEvent: {}
+[6.124078] (-) TimerEvent: {}
+[6.224474] (-) TimerEvent: {}
+[6.324823] (-) TimerEvent: {}
+[6.425209] (-) TimerEvent: {}
+[6.525558] (-) TimerEvent: {}
+[6.625942] (-) TimerEvent: {}
+[6.726343] (-) TimerEvent: {}
+[6.826705] (-) TimerEvent: {}
+[6.927035] (-) TimerEvent: {}
+[7.027416] (-) TimerEvent: {}
+[7.127751] (-) TimerEvent: {}
+[7.228143] (-) TimerEvent: {}
+[7.328551] (-) TimerEvent: {}
+[7.428950] (-) TimerEvent: {}
+[7.529364] (-) TimerEvent: {}
+[7.629781] (-) TimerEvent: {}
+[7.730239] (-) TimerEvent: {}
+[7.830590] (-) TimerEvent: {}
+[7.930992] (-) TimerEvent: {}
+[8.031416] (-) TimerEvent: {}
+[8.131812] (-) TimerEvent: {}
+[8.232242] (-) TimerEvent: {}
+[8.332652] (-) TimerEvent: {}
+[8.433064] (-) TimerEvent: {}
+[8.533564] (-) TimerEvent: {}
+[8.633939] (-) TimerEvent: {}
+[8.734347] (-) TimerEvent: {}
+[8.834731] (-) TimerEvent: {}
+[8.935128] (-) TimerEvent: {}
+[9.035555] (-) TimerEvent: {}
+[9.135953] (-) TimerEvent: {}
+[9.236375] (-) TimerEvent: {}
+[9.336763] (-) TimerEvent: {}
+[9.437251] (-) TimerEvent: {}
+[9.537731] (-) TimerEvent: {}
+[9.638162] (-) TimerEvent: {}
+[9.738632] (-) TimerEvent: {}
+[9.839128] (-) TimerEvent: {}
+[9.939437] (-) TimerEvent: {}
+[10.039779] (-) TimerEvent: {}
+[10.140247] (-) TimerEvent: {}
+[10.240734] (-) TimerEvent: {}
+[10.341193] (-) TimerEvent: {}
+[10.441594] (-) TimerEvent: {}
+[10.542084] (-) TimerEvent: {}
+[10.642546] (-) TimerEvent: {}
+[10.742899] (-) TimerEvent: {}
+[10.843400] (-) TimerEvent: {}
+[10.943881] (-) TimerEvent: {}
+[11.044433] (-) TimerEvent: {}
+[11.144925] (-) TimerEvent: {}
+[11.245438] (-) TimerEvent: {}
+[11.345863] (-) TimerEvent: {}
+[11.446230] (-) TimerEvent: {}
+[11.546707] (-) TimerEvent: {}
+[11.647188] (-) TimerEvent: {}
+[11.747624] (-) TimerEvent: {}
+[11.848102] (-) TimerEvent: {}
+[11.948599] (-) TimerEvent: {}
+[12.049095] (-) TimerEvent: {}
+[12.149623] (-) TimerEvent: {}
+[12.250191] (-) TimerEvent: {}
+[12.350685] (-) TimerEvent: {}
+[12.451283] (-) TimerEvent: {}
+[12.551870] (-) TimerEvent: {}
+[12.652300] (-) TimerEvent: {}
+[12.752754] (-) TimerEvent: {}
+[12.853143] (-) TimerEvent: {}
+[12.953446] (-) TimerEvent: {}
+[13.053818] (-) TimerEvent: {}
+[13.154231] (-) TimerEvent: {}
+[13.254575] (-) TimerEvent: {}
+[13.354930] (-) TimerEvent: {}
+[13.455411] (-) TimerEvent: {}
+[13.555920] (-) TimerEvent: {}
+[13.656365] (-) TimerEvent: {}
+[13.756834] (-) TimerEvent: {}
+[13.857235] (-) TimerEvent: {}
+[13.957644] (-) TimerEvent: {}
+[14.058003] (-) TimerEvent: {}
+[14.158444] (-) TimerEvent: {}
+[14.258764] (-) TimerEvent: {}
+[14.359223] (-) TimerEvent: {}
+[14.459681] (-) TimerEvent: {}
+[14.560142] (-) TimerEvent: {}
+[14.660634] (-) TimerEvent: {}
+[14.761098] (-) TimerEvent: {}
+[14.861580] (-) TimerEvent: {}
+[14.962061] (-) TimerEvent: {}
+[15.062529] (-) TimerEvent: {}
+[15.162987] (-) TimerEvent: {}
+[15.263491] (-) TimerEvent: {}
+[15.363947] (-) TimerEvent: {}
+[15.464429] (-) TimerEvent: {}
+[15.564856] (-) TimerEvent: {}
+[15.665274] (-) TimerEvent: {}
+[15.765705] (-) TimerEvent: {}
+[15.866143] (-) TimerEvent: {}
+[15.966659] (-) TimerEvent: {}
+[16.067138] (-) TimerEvent: {}
+[16.167648] (-) TimerEvent: {}
+[16.268072] (-) TimerEvent: {}
+[16.368561] (-) TimerEvent: {}
+[16.469030] (-) TimerEvent: {}
+[16.569440] (-) TimerEvent: {}
+[16.669863] (-) TimerEvent: {}
+[16.770194] (-) TimerEvent: {}
+[16.870481] (-) TimerEvent: {}
+[16.970773] (-) TimerEvent: {}
+[17.071068] (-) TimerEvent: {}
+[17.171379] (-) TimerEvent: {}
+[17.272255] (-) TimerEvent: {}
+[17.372620] (-) TimerEvent: {}
+[17.473217] (-) TimerEvent: {}
+[17.573546] (-) TimerEvent: {}
+[17.673893] (-) TimerEvent: {}
+[17.774408] (-) TimerEvent: {}
+[17.874935] (-) TimerEvent: {}
+[17.975244] (-) TimerEvent: {}
+[18.075625] (-) TimerEvent: {}
+[18.176035] (-) TimerEvent: {}
+[18.276512] (-) TimerEvent: {}
+[18.376945] (-) TimerEvent: {}
+[18.477434] (-) TimerEvent: {}
+[18.577796] (-) TimerEvent: {}
+[18.678286] (-) TimerEvent: {}
+[18.778789] (-) TimerEvent: {}
+[18.879253] (-) TimerEvent: {}
+[18.979642] (-) TimerEvent: {}
+[19.080028] (-) TimerEvent: {}
+[19.180457] (-) TimerEvent: {}
+[19.280932] (-) TimerEvent: {}
+[19.381374] (-) TimerEvent: {}
+[19.481712] (-) TimerEvent: {}
+[19.582204] (-) TimerEvent: {}
+[19.682699] (-) TimerEvent: {}
+[19.783136] (-) TimerEvent: {}
+[19.883522] (-) TimerEvent: {}
+[19.983989] (-) TimerEvent: {}
+[20.084496] (-) TimerEvent: {}
+[20.185002] (-) TimerEvent: {}
+[20.285469] (-) TimerEvent: {}
+[20.385925] (-) TimerEvent: {}
+[20.486430] (-) TimerEvent: {}
+[20.586926] (-) TimerEvent: {}
+[20.687433] (-) TimerEvent: {}
+[20.787916] (-) TimerEvent: {}
+[20.888412] (-) TimerEvent: {}
+[20.988915] (-) TimerEvent: {}
+[21.089377] (-) TimerEvent: {}
+[21.189743] (-) TimerEvent: {}
+[21.290220] (-) TimerEvent: {}
+[21.390694] (-) TimerEvent: {}
+[21.491067] (-) TimerEvent: {}
+[21.591393] (-) TimerEvent: {}
+[21.691676] (-) TimerEvent: {}
+[21.792001] (-) TimerEvent: {}
+[21.892467] (-) TimerEvent: {}
+[21.992856] (-) TimerEvent: {}
+[22.093286] (-) TimerEvent: {}
+[22.193747] (-) TimerEvent: {}
+[22.294234] (-) TimerEvent: {}
+[22.394650] (-) TimerEvent: {}
+[22.495249] (-) TimerEvent: {}
+[22.595715] (-) TimerEvent: {}
+[22.696160] (-) TimerEvent: {}
+[22.796684] (-) TimerEvent: {}
+[22.897124] (-) TimerEvent: {}
+[22.997536] (-) TimerEvent: {}
+[23.097883] (-) TimerEvent: {}
+[23.198336] (-) TimerEvent: {}
+[23.298764] (-) TimerEvent: {}
+[23.399195] (-) TimerEvent: {}
+[23.499647] (-) TimerEvent: {}
+[23.600097] (-) TimerEvent: {}
+[23.700568] (-) TimerEvent: {}
+[23.801042] (-) TimerEvent: {}
+[23.901535] (-) TimerEvent: {}
+[24.001982] (-) TimerEvent: {}
+[24.102317] (-) TimerEvent: {}
+[24.202794] (-) TimerEvent: {}
+[24.303280] (-) TimerEvent: {}
+[24.403714] (-) TimerEvent: {}
+[24.504146] (-) TimerEvent: {}
+[24.604634] (-) TimerEvent: {}
+[24.705095] (-) TimerEvent: {}
+[24.805963] (-) TimerEvent: {}
+[24.906409] (-) TimerEvent: {}
+[25.006741] (-) TimerEvent: {}
+[25.107216] (-) TimerEvent: {}
+[25.207681] (-) TimerEvent: {}
+[25.308137] (-) TimerEvent: {}
+[25.358571] (gim_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable impedance_simulator_node\x1b[0m\n'}
+[25.408282] (-) TimerEvent: {}
+[25.508720] (-) TimerEvent: {}
+[25.609075] (-) TimerEvent: {}
+[25.665966] (gim_control) StdoutLine: {'line': b'[100%] Built target impedance_simulator_node\n'}
+[25.682386] (gim_control) CommandEnded: {'returncode': 0}
+[25.683738] (gim_control) JobProgress: {'identifier': 'gim_control', 'progress': 'install'}
+[25.695367] (gim_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tue/gim_control/build/gim_control'], 'cwd': '/home/tue/gim_control/build/gim_control', 'env': OrderedDict([('JJ_PAGER', 'cat'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tue'), ('ANTIGRAVITY_SOURCE_METADATA', '{"tool":{"conversationId":"873f0c2e-f775-4e3e-8eae-e05990542eea","stepIndex":32,"toolCall":{"id":"call_244852","name":"run_command","argumentsJson":"{\\"CommandLine\\":\\"colcon build --packages-select gim_control\\",\\"Cwd\\":\\"/home/tue/gim_control\\",\\"IsDaemon\\":false,\\"WaitMsBeforeAsync\\":10000,\\"toolAction\\":\\"Testing build with restored file\\",\\"toolSummary\\":\\"Test colcon build\\"}","thinkingSignature":"EuIBCt8BAWkUfRMYRYZH3FphWelhsCWikKtwnqQhhfv019dVnAmg1DSD6bhIQD1qpGRnlRh5YU8ZUdDBe7zwzkfLqvo+7knOb97ynARiGVRqNCJceyvduFG9zYRbMypptUS0S+lXWXftJ4tsRezsyJ7wwGmFWLNmxhxo0tPXIbJyHVzr0FzPHJeltYtY6jPVCR3EhVwyR2L/osIvM1Jd3rhAkCtHZA+XJ77Qf5/Y+ZHYNxSViXhAamNlI2hGcSrl0dtWAI1Yza+dKkVdalkP7GtwjZDaL4mKSQ4S4LD74Y7pGYA4AQ=="}}}'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/tue/STM32CubeMX'), ('ANTIGRAVITY_AGENTAPI_EXE', '/home/tue/.local/bin/agy'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/tue/gim_control/install/gim_control/lib:/home/tue/rs_control/install/rs_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tue'), ('OLDPWD', '/home/tue'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/tue/.nvm/versions/node/v22.23.3/bin'), ('NVM_INC', '/home/tue/.nvm/versions/node/v22.23.3/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('MANAGERPID', '1222'), ('SYSTEMD_EXEC_PID', '1775'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '172386'), ('NVM_DIR', '/home/tue/.nvm'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/tue/rs_control/install:/home/tue/gim_control/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'tue'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:10100'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tue'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('ANTIGRAVITY_APP_DATA_DIR', '/home/tue/.gemini/antigravity-cli'), ('WINDOWPATH', '2'), ('ANTIGRAVITY_LS_VERSION', 'cli-1.3.4'), ('PATH', '/home/tue/.gemini/antigravity-cli/bin:/home/tue/.nvm/versions/node/v22.23.3/bin:/home/tue/.local/bin:/home/tue/.npm-global/bin:/opt/ros/humble/bin:/home/tue/.local/bin:/home/tue/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/share/code/bin'), ('SESSION_MANAGER', 'local/tue:@/tmp/.ICE-unix/1536,unix/tue:/tmp/.ICE-unix/1536'), ('INVOCATION_ID', '711ecaf922064bfa98bbda35ef67724c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ANTIGRAVITY_CONVERSATION_ID', '873f0c2e-f775-4e3e-8eae-e05990542eea'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/tue/gim_control/install/gim_control:/home/tue/rs_control/install/rs_control:/opt/ros/humble'), ('ANTIGRAVITY_PROJECT_ID', 'default-cli-project'), ('SHELL', '/bin/bash'), ('ANTIGRAVITY_LS_ADDRESS', 'localhost:46497'), ('LC_NAME', 'vi_VN'), ('TERMINATOR_UUID', 'urn:uuid:7e925ad2-466a-409d-bf38-c9429f56aac1'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('ANTIGRAVITY_TRAJECTORY_ID', 'c069d41d-1721-4fc2-b015-cfec2981ba17'), ('PWD', '/home/tue/gim_control/build/gim_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tue/rs_control/install/rs_control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ANTIGRAVITY_CSRF_TOKEN', '0762fe7b-cf5a-4053-bcc4-138cfd880b5a'), ('CMAKE_PREFIX_PATH', '/home/tue/gim_control/install/gim_control:/home/tue/rs_control/install/rs_control:/opt/ros/humble')]), 'shell': False}
+[25.703827] (gim_control) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[25.704282] (gim_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[25.704517] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.sh\n'}
+[25.704689] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.dsv\n'}
+[25.704894] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/libgim_control_interface.a\n'}
+[25.705084] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/libgim_kinematics.a\n'}
+[25.705269] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/libgim_trajectory.a\n'}
+[25.705375] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/gim_control/gim_control_node\n'}
+[25.705422] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/gim_control/trajectory_simulator_node\n'}
+[25.705521] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_simulator_node\n'}
+[25.705627] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_control_node\n'}
+[25.705714] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_tuner_node\n'}
+[25.705832] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/lib/gim_control/plot_calibration.py\n'}
+[25.706232] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/base_link.stl\n'}
+[25.706348] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/lower_arm_link.stl\n'}
+[25.706445] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/shoulder_link.stl\n'}
+[25.706547] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/upper_arm_link.stl\n'}
+[25.706644] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/gim_arm.urdf\n'}
+[25.706742] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/mujoco_description.xml\n'}
+[25.706854] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/robot_description_formatted.urdf\n'}
+[25.707084] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/base_link.STL\n'}
+[25.707180] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/lower_arm_link.STL\n'}
+[25.707281] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/shoulder_link.STL\n'}
+[25.707386] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/upper_arm_link.STL\n'}
+[25.707617] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/launch/display.launch.py\n'}
+[25.707711] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/launch/mujoco.launch.py\n'}
+[25.707930] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/rviz/urdf.rviz\n'}
+[25.708381] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_140920.csv\n'}
+[25.709138] (-) TimerEvent: {}
+[25.720283] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_140920.png\n'}
+[25.729926] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141029.csv\n'}
+[25.739851] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141029.png\n'}
+[25.752032] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141105.csv\n'}
+[25.762071] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141105.png\n'}
+[25.772099] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141159.csv\n'}
+[25.783328] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141159.png\n'}
+[25.793369] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141244.csv\n'}
+[25.803194] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141244.png\n'}
+[25.809302] (-) TimerEvent: {}
+[25.815897] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141330.csv\n'}
+[25.826641] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141330.png\n'}
+[25.836198] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141406.csv\n'}
+[25.848423] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141406.png\n'}
+[25.857939] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141454.csv\n'}
+[25.867758] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141454.png\n'}
+[25.877388] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141525.csv\n'}
+[25.888456] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141525.png\n'}
+[25.898583] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141748.csv\n'}
+[25.908231] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141748.png\n'}
+[25.909373] (-) TimerEvent: {}
+[25.920033] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141828.csv\n'}
+[25.930612] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_141828.png\n'}
+[25.941301] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_142259.csv\n'}
+[25.953283] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_142259.png\n'}
+[25.963674] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_142344.csv\n'}
+[25.973582] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_142344.png\n'}
+[25.986712] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_142420.csv\n'}
+[25.997817] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_142420.png\n'}
+[26.008302] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_142515.csv\n'}
+[26.009452] (-) TimerEvent: {}
+[26.022320] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/config/calibration_logs/calib_elbow_20261013_142515.png\n'}
+[26.032141] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/config/controllers.yaml\n'}
+[26.032506] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/config/motor_params.yaml\n'}
+[26.032643] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/package_run_dependencies/gim_control\n'}
+[26.032890] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/parent_prefix_path/gim_control\n'}
+[26.033053] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.sh\n'}
+[26.033195] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.dsv\n'}
+[26.033371] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.sh\n'}
+[26.033473] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.dsv\n'}
+[26.033577] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.bash\n'}
+[26.033721] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.sh\n'}
+[26.033879] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.zsh\n'}
+[26.034087] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.dsv\n'}
+[26.034176] (gim_control) StdoutLine: {'line': b'-- Symlinking: /home/tue/gim_control/install/gim_control/share/gim_control/package.dsv\n'}
+[26.044136] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/packages/gim_control\n'}
+[26.044458] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[26.044655] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[26.044772] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig.cmake\n'}
+[26.044936] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig-version.cmake\n'}
+[26.045127] (gim_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/tue/gim_control/install/gim_control/share/gim_control/package.xml\n'}
+[26.045270] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include\n'}
+[26.045384] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/gim_control_interface.hpp\n'}
+[26.045485] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include\n'}
+[26.045586] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/fk.hpp\n'}
+[26.045683] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/ik.hpp\n'}
+[26.045781] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/jacobian.hpp\n'}
+[26.045878] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/utils.hpp\n'}
+[26.045974] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include\n'}
+[26.046039] (gim_control) StdoutLine: {'line': b'-- Up-to-date: /home/tue/gim_control/install/gim_control/include/trajectory.hpp\n'}
+[26.048343] (gim_control) CommandEnded: {'returncode': 0}
+[26.065123] (gim_control) JobEnded: {'identifier': 'gim_control', 'rc': 0}
+[26.066027] (-) EventReactorShutdown: {}

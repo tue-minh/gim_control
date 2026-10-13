@@ -5,12 +5,18 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
+find_package(yaml-cpp REQUIRED)
 
 add_library(gim_kinematics
   src/robot_kinematic/src/fk.cpp
@@ -72,12 +78,27 @@ add_executable(impedance_simulator_node
 ament_target_dependencies(impedance_simulator_node rclcpp std_msgs sensor_msgs)
 target_link_libraries(impedance_simulator_node gim_control_interface)
 
+add_executable(impedance_control_node
+  src/robot_impedance_control_node/impedance_control_node.cpp
+)
+ament_target_dependencies(impedance_control_node rclcpp std_msgs sensor_msgs)
+target_link_libraries(impedance_control_node gim_control_interface yaml-cpp)
+
+add_executable(impedance_tuner_node
+  src/robot_impedance_control_node/impedance_tuner_node.cpp
+)
+ament_target_dependencies(impedance_tuner_node rclcpp std_msgs sensor_msgs)
+
 ament_export_libraries(gim_control_interface gim_kinematics gim_trajectory)
 
-install(TARGETS gim_control_interface gim_kinematics gim_trajectory gim_control_node trajectory_simulator_node impedance_simulator_node
+install(TARGETS gim_control_interface gim_kinematics gim_trajectory gim_control_node trajectory_simulator_node impedance_simulator_node impedance_control_node impedance_tuner_node
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
+
+install(PROGRAMS scripts/plot_calibration.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 install(DIRECTORY src/robot_hardware/include/ src/robot_kinematic/include/ src/robot_trajectory/include/

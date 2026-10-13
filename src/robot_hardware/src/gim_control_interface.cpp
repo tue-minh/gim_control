@@ -23,10 +23,13 @@ GimControlInterface::GimControlInterface()
   running_(true) {
     RCLCPP_INFO(this->get_logger(), "GIM Control Interface Initialized!");
 
+    // CAN node ids start at 1 (base=1, shoulder=2, elbow=3), so one slot is needed per node id
+    // *and* the unused slot 0 that keeps the vector indexable by node id. `joint_number` is the
+    // highest node id in use (default 3 -> slots 0..3).
     int joint_number = 3;
     declare_parameter("joint_number", 3);
     get_parameter("joint_number", joint_number);
-    encoder_data_.resize(joint_number);
+    encoder_data_.resize(static_cast<size_t>(joint_number) + 1);
 
     sock_ = socket(PF_CAN, SOCK_RAW, CAN_RAW);
     if (sock_ < 0) {
@@ -88,7 +91,7 @@ void GimControlInterface::initialize_odrive(int node_id) {
         return;
     }
     RCLCPP_INFO(this->get_logger(), "Node %d set to AXIS_STATE_IDLE", node_id);
-    usleep(2000000);
+    usleep(100000); // 100ms is sufficient for ODrive to enter IDLE
 }
 
 void GimControlInterface::InitVelocityMode(int node_id) {
@@ -107,7 +110,7 @@ void GimControlInterface::InitVelocityMode(int node_id) {
         return;
     }
     RCLCPP_INFO(this->get_logger(), "Set Velocity Control Mode for Node %d", node_id);
-    usleep(2000000);
+    usleep(100000); // 100ms
 
     frame.can_id = (node_id << 5) | 0x007;
     frame.can_dlc = 4;
@@ -119,7 +122,7 @@ void GimControlInterface::InitVelocityMode(int node_id) {
         return;
     }
     RCLCPP_INFO(this->get_logger(), "Set Closed Loop Control for Node %d", node_id);
-    usleep(2000000);
+    usleep(200000); // 200ms
 }
 
 void GimControlInterface::InitPositionMode(int node_id) {
@@ -138,7 +141,7 @@ void GimControlInterface::InitPositionMode(int node_id) {
         return;
     }
     RCLCPP_INFO(this->get_logger(), "Set Position Control Mode for Node %d", node_id);
-    usleep(2000000);
+    usleep(100000); // 100ms
 
     frame.can_id = (node_id << 5) | 0x007;
     frame.can_dlc = 4;
@@ -150,7 +153,7 @@ void GimControlInterface::InitPositionMode(int node_id) {
         return;
     }
     RCLCPP_INFO(this->get_logger(), "Set Closed Loop Control for Node %d", node_id);
-    usleep(2000000);
+    usleep(200000); // 200ms
 }
 
 void GimControlInterface::InitTorqueMode(int node_id) {
@@ -161,7 +164,7 @@ void GimControlInterface::InitTorqueMode(int node_id) {
     frame.can_id = (node_id << 5) | 0x00B;
     frame.can_dlc = 8;
     int32_t control_mode = 1;
-    int32_t input_mode = 6;
+    int32_t input_mode = 1;
     std::memcpy(frame.data, &control_mode, sizeof(int32_t));
     std::memcpy(frame.data + 4, &input_mode, sizeof(int32_t));
     if (write(sock_, &frame, sizeof(struct can_frame)) != sizeof(struct can_frame)) {
@@ -169,10 +172,10 @@ void GimControlInterface::InitTorqueMode(int node_id) {
         return;
     }
     RCLCPP_INFO(this->get_logger(), "Set Torque Control Mode for Node %d", node_id);
-    usleep(500000);
+    usleep(100000); // 100ms
 
     frame.can_id = (node_id << 5) | 0x007;
-    frame.can_dlc = 8;
+    frame.can_dlc = 4;
     int32_t axis_state = 8;
     std::memcpy(frame.data, &axis_state, sizeof(int32_t));
     std::memset(frame.data + 4, 0, 4);
@@ -181,7 +184,7 @@ void GimControlInterface::InitTorqueMode(int node_id) {
         return;
     }
     RCLCPP_INFO(this->get_logger(), "Set Closed Loop Control for Node %d", node_id);
-    usleep(3000000);
+    usleep(200000); // 200ms
 }
 
 void GimControlInterface::SendVelocityCommand(int node_id, float velocity) {
@@ -245,6 +248,10 @@ void GimControlInterface::DisableMotor(int node_id) {
 
 void GimControlInterface::ReadEncoder(int node_id) {
     send_can_remote_frame(node_id, 0x009);
+}
+
+void GimControlInterface::ReadTorque(int node_id) {
+    send_can_remote_frame(node_id, 0x014);
 }
 
 void GimControlInterface::get_encoder_data(int node_id, float &pos, float &vel) {

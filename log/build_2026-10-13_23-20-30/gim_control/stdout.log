@@ -1,0 +1,8 @@
+[ 22%] Built target gim_trajectory
+[ 33%] Built target gim_kinematics
+[ 44%] Built target gim_control_interface
+[ 55%] Built target impedance_tuner_node
+[ 94%] Built target impedance_control_node
+[ 94%] Built target gim_control_node
+[ 94%] [32mBuilding CXX object CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o[0m
+[ 94%] Built target trajectory_simulator_node

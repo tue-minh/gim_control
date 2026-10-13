@@ -1,0 +1,77 @@
+[0.011s] Invoking command in '/home/tue/gim_control/build/gim_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tue/gim_control/build/gim_control -- -j12 -l12
+[0.066s] Consolidate compiler generated dependencies of target gim_control_interface
+[0.076s] [ 22%] Built target gim_kinematics
+[0.076s] [ 33%] Built target gim_trajectory
+[0.081s] [ 38%] Building CXX object CMakeFiles/impedance_tuner_node.dir/src/impedance_tuner_node.cpp.o
+[0.085s] [ 50%] Built target gim_control_interface
+[0.114s] [ 61%] Built target trajectory_simulator_node
+[0.118s] [ 94%] Built target gim_control_node
+[0.118s] [ 94%] Built target impedance_control_node
+[0.119s] [ 94%] Built target impedance_simulator_node
+[23.541s] [100%] Linking CXX executable impedance_tuner_node
+[23.826s] [100%] Built target impedance_tuner_node
+[23.841s] Invoked command in '/home/tue/gim_control/build/gim_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tue/gim_control/build/gim_control -- -j12 -l12
+[23.853s] Invoking command in '/home/tue/gim_control/build/gim_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tue/gim_control/build/gim_control
+[23.862s] -- Install configuration: "Release"
+[23.863s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.sh
+[23.863s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/library_path.dsv
+[23.863s] -- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_control_interface.a
+[23.863s] -- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_kinematics.a
+[23.864s] -- Up-to-date: /home/tue/gim_control/install/gim_control/lib/libgim_trajectory.a
+[23.864s] -- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/gim_control_node
+[23.864s] -- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/trajectory_simulator_node
+[23.864s] -- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_simulator_node
+[23.864s] -- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_control_node
+[23.864s] -- Installing: /home/tue/gim_control/install/gim_control/lib/gim_control/impedance_tuner_node
+[23.869s] -- Set runtime path of "/home/tue/gim_control/install/gim_control/lib/gim_control/impedance_tuner_node" to ""
+[23.869s] -- Up-to-date: /home/tue/gim_control/install/gim_control/lib/gim_control/plot_calibration.py
+[23.870s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include
+[23.870s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include/gim_control_interface.hpp
+[23.870s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include
+[23.870s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include/fk.hpp
+[23.870s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include/ik.hpp
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include/jacobian.hpp
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include/utils.hpp
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/include/trajectory.hpp
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/decomposed
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/upper_arm_link.stl
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/lower_arm_link.stl
+[23.871s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/base_link.stl
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/assets/full/shoulder_link.stl
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/gim_arm.urdf
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/mujoco_description.xml
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/urdf/robot_description_formatted.urdf
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/base_link.STL
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/upper_arm_link.STL
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/lower_arm_link.STL
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/meshes/shoulder_link.STL
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch/display.launch.py
+[23.872s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/launch/mujoco.launch.py
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/rviz
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/rviz/urdf.rviz
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/config
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/config/controllers.yaml
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/package_run_dependencies/gim_control
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/parent_prefix_path/gim_control
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.sh
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/ament_prefix_path.dsv
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.sh
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/environment/path.dsv
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.bash
+[23.873s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.sh
+[23.874s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.zsh
+[23.874s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/local_setup.dsv
+[23.874s] -- Installing: /home/tue/gim_control/install/gim_control/share/gim_control/package.dsv
+[23.874s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/ament_index/resource_index/packages/gim_control
+[23.874s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[23.874s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/ament_cmake_export_libraries-extras.cmake
+[23.874s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig.cmake
+[23.874s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/cmake/gim_controlConfig-version.cmake
+[23.874s] -- Up-to-date: /home/tue/gim_control/install/gim_control/share/gim_control/package.xml
+[23.875s] Invoked command in '/home/tue/gim_control/build/gim_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tue/gim_control/build/gim_control

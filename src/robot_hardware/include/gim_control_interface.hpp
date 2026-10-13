@@ -37,6 +37,8 @@ public:
     // Non-blocking (no sleeps) so it is safe to call from shutdown paths.
     void DisableMotor(int node_id);
     void ReadEncoder(int node_id);
+    // Request the measured motor torque (Get_Iq, 0x14); the reply is handled by process_torque().
+    void ReadTorque(int node_id);
     void get_encoder_data(int node_id, float &pos, float &vel);
     void get_torque_data(int node_id, float &torque);
     bool has_encoder_data(int node_id) const;

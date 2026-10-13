@@ -1,0 +1,55 @@
+# gim_control motor parameters - source of truth for impedance_control_node.
+# The node loads this file at start-up and re-writes it whenever a parameter changes
+# (auto_save_params). Hand edits are kept while the node is stopped.
+motors:
+  base:
+    node_id: 0
+    joint_name: base_joint
+    gear_ratio: 8
+    invert_direction: true
+    torque_sign: -1
+    torque_gear_ratio: 1
+    torque_limit: 5
+    joint_lower: -0.7121
+    joint_upper: 1.0226
+    pid:
+      pos_gain: 4
+      vel_gain: 1.2
+      vel_integrator_gain: 0.1
+    impedance:
+      kp: 0
+      kd: 0
+  shoulder:
+    node_id: 1
+    joint_name: shoulder_joint
+    gear_ratio: 64
+    invert_direction: false
+    torque_sign: 1
+    torque_gear_ratio: 8
+    torque_limit: 40
+    joint_lower: -0.2366
+    joint_upper: 1.3435
+    pid:
+      pos_gain: 0.5
+      vel_gain: 0.1
+      vel_integrator_gain: 0
+    impedance:
+      kp: 0
+      kd: 0
+  elbow:
+    node_id: 2
+    joint_name: elbow_joint
+    gear_ratio: 8
+    invert_direction: true
+    torque_sign: -1
+    torque_gear_ratio: 1
+    torque_limit: 5
+    joint_lower: -0.2336
+    joint_upper: 1.7762
+    pid:
+      pos_gain: 4
+      vel_gain: 1.5
+      vel_integrator_gain: 0.1
+    impedance:
+      kp: 24
+      kd: 0.3

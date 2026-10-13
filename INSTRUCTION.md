@@ -15,9 +15,15 @@ This package provides a C++ ROS2 Humble library for controlling the GIM6010-8 mo
 │   ├── robot_kinematic/           # FK, IK, and Jacobian libraries
 │   ├── robot_trajectory/          # Trajectory generation and CSV files
 │   ├── robot_description/         # URDF, meshes, launch files, RViz configs
-│   ├── trajectory_simulator_node.cpp # CSV Trajectory runner 
-│   ├── impedance_simulator_node.cpp  # Real-hardware impedance controller (CAN)
-│   └── main.cpp                   # Main hardware node execution
+│   ├── robot_impedance_control_node/  # Impedance calibration & tuner nodes
+│   │   ├── impedance_control_node.cpp # Real-hardware calibration controller: POSITION @ 0 + 1 motor IMPEDANCE
+│   │   └── impedance_tuner_node.cpp   # Interactive terminal tuner (select/tune/traj/save/plot)
+│   ├── trajectory_simulator_node.cpp  # CSV Trajectory runner 
+│   ├── impedance_simulator_node.cpp   # Real-hardware impedance controller (CAN)
+│   └── main.cpp                    # Main hardware node execution
+├── scripts/plot_calibration.py     # Matplotlib figure generator for calibration logs
+├── config/                         # controller config + saved motor_params.yaml + calibration_logs/
+├── IMPEDANCE_TUNER.md              # Introduction & guide for the impedance tuner
 └── reference/              # Reference ODrive interface (existing)
 ```
 
@@ -160,6 +166,32 @@ Alternatively, run the hardware node standalone:
 ```bash
 ros2 run gim_control gim_control_node
 ```
+
+### Option 6: Impedance calibration / tuning (real hardware)
+`impedance_control_node` + `impedance_tuner_node` are a two-node tool for tuning the three
+motors in impedance mode. The hardware node holds all motors in POSITION @ 0 on start and can
+put **one** selected motor into IMPEDANCE mode; the tuner node gives you an interactive
+terminal to select the motor, tune PID / impedance gains live, run a 0 → target → 0
+calibration trajectory and write the resulting CSV + figure.
+```bash
+# terminal 1
+ros2 run gim_control impedance_control_node
+# terminal 2
+ros2 run gim_control impedance_tuner_node
+```
+```text
+gim> select shoulder
+gim> imp shoulder 8 0.5
+gim> traj 0.6 2 1 2
+gim> save
+```
+All motor parameters (CAN ids, gear ratios, direction signs, torque limits, joint limits, PID and
+impedance gains) live in **`config/motor_params.yaml`**. `impedance_control_node` loads that file at
+start-up and re-writes it whenever a parameter is tuned (`auto_save_params`), so the node always
+runs from the file rather than from values compiled into the node.
+
+See **[IMPEDANCE_TUNER.md](IMPEDANCE_TUNER.md)** for the full introduction, topic reference and
+command list.
 
 ---
 

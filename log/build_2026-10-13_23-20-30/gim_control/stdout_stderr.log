@@ -1,0 +1,13 @@
+[ 22%] Built target gim_trajectory
+[ 33%] Built target gim_kinematics
+[ 44%] Built target gim_control_interface
+[ 55%] Built target impedance_tuner_node
+[ 94%] Built target impedance_control_node
+[ 94%] Built target gim_control_node
+[ 94%] [32mBuilding CXX object CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o[0m
+[ 94%] Built target trajectory_simulator_node
+cc1plus: fatal error: /home/tue/gim_control/src/impedance_simulator_node.cpp: No such file or directory
+compilation terminated.
+gmake[2]: *** [CMakeFiles/impedance_simulator_node.dir/build.make:76: CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:282: CMakeFiles/impedance_simulator_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
