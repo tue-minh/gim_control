@@ -1,0 +1,8 @@
+/home/tue/gim_control/src/robot_impedance_control_node/impedance_trajectory_node.cpp: In member function ‘void ImpedanceTrajectoryNode::startup_worker()’:
+/home/tue/gim_control/src/robot_impedance_control_node/impedance_trajectory_node.cpp:627:9: error: ‘publish_status’ was not declared in this scope; did you mean ‘print_status’?
+  627 |         publish_status();
+      |         ^~~~~~~~~~~~~~
+      |         print_status
+gmake[2]: *** [CMakeFiles/impedance_trajectory_node.dir/build.make:76: CMakeFiles/impedance_trajectory_node.dir/src/robot_impedance_control_node/impedance_trajectory_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:339: CMakeFiles/impedance_trajectory_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

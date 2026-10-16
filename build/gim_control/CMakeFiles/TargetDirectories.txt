@@ -5,9 +5,11 @@
 /home/tue/gim_control/build/gim_control/CMakeFiles/gim_control_interface.dir
 /home/tue/gim_control/build/gim_control/CMakeFiles/gim_control_node.dir
 /home/tue/gim_control/build/gim_control/CMakeFiles/trajectory_simulator_node.dir
-/home/tue/gim_control/build/gim_control/CMakeFiles/impedance_simulator_node.dir
 /home/tue/gim_control/build/gim_control/CMakeFiles/impedance_control_node.dir
 /home/tue/gim_control/build/gim_control/CMakeFiles/impedance_tuner_node.dir
+/home/tue/gim_control/build/gim_control/CMakeFiles/impedance_trajectory_node.dir
+/home/tue/gim_control/build/gim_control/CMakeFiles/admittance_control_node.dir
+/home/tue/gim_control/build/gim_control/CMakeFiles/admittance_tuner_node.dir
 /home/tue/gim_control/build/gim_control/CMakeFiles/test.dir
 /home/tue/gim_control/build/gim_control/CMakeFiles/edit_cache.dir
 /home/tue/gim_control/build/gim_control/CMakeFiles/rebuild_cache.dir

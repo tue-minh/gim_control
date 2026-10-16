@@ -237,7 +237,7 @@ private:
             print_help();
         } else if (cmd == "quit" || cmd == "exit" || cmd == "q") {
             running_ = false;
-        } else if (cmd == "disable" || cmd == "off" || cmd == "idle") {
+        } else if (cmd == "disable" || cmd == "off" || cmd == "idle" || cmd == "0") {
             do_select(0);
         } else if (cmd == "select") {
             std::string motor;

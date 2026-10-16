@@ -263,19 +263,6 @@ trajectory_simulator_node/fast:
 .PHONY : trajectory_simulator_node/fast
 
 #=============================================================================
-# Target rules for targets named impedance_simulator_node
-
-# Build rule for target.
-impedance_simulator_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 impedance_simulator_node
-.PHONY : impedance_simulator_node
-
-# fast build rule for target.
-impedance_simulator_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/build
-.PHONY : impedance_simulator_node/fast
-
-#=============================================================================
 # Target rules for targets named impedance_control_node
 
 # Build rule for target.
@@ -301,29 +288,44 @@ impedance_tuner_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_tuner_node.dir/build.make CMakeFiles/impedance_tuner_node.dir/build
 .PHONY : impedance_tuner_node/fast
 
-src/impedance_simulator_node.o: src/impedance_simulator_node.cpp.o
-.PHONY : src/impedance_simulator_node.o
+#=============================================================================
+# Target rules for targets named impedance_trajectory_node
 
-# target to build an object file
-src/impedance_simulator_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.o
-.PHONY : src/impedance_simulator_node.cpp.o
+# Build rule for target.
+impedance_trajectory_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 impedance_trajectory_node
+.PHONY : impedance_trajectory_node
 
-src/impedance_simulator_node.i: src/impedance_simulator_node.cpp.i
-.PHONY : src/impedance_simulator_node.i
+# fast build rule for target.
+impedance_trajectory_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_trajectory_node.dir/build.make CMakeFiles/impedance_trajectory_node.dir/build
+.PHONY : impedance_trajectory_node/fast
 
-# target to preprocess a source file
-src/impedance_simulator_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.i
-.PHONY : src/impedance_simulator_node.cpp.i
+#=============================================================================
+# Target rules for targets named admittance_control_node
 
-src/impedance_simulator_node.s: src/impedance_simulator_node.cpp.s
-.PHONY : src/impedance_simulator_node.s
+# Build rule for target.
+admittance_control_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 admittance_control_node
+.PHONY : admittance_control_node
 
-# target to generate assembly for a file
-src/impedance_simulator_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_simulator_node.dir/build.make CMakeFiles/impedance_simulator_node.dir/src/impedance_simulator_node.cpp.s
-.PHONY : src/impedance_simulator_node.cpp.s
+# fast build rule for target.
+admittance_control_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_control_node.dir/build.make CMakeFiles/admittance_control_node.dir/build
+.PHONY : admittance_control_node/fast
+
+#=============================================================================
+# Target rules for targets named admittance_tuner_node
+
+# Build rule for target.
+admittance_tuner_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 admittance_tuner_node
+.PHONY : admittance_tuner_node
+
+# fast build rule for target.
+admittance_tuner_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_tuner_node.dir/build.make CMakeFiles/admittance_tuner_node.dir/build
+.PHONY : admittance_tuner_node/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -348,6 +350,54 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_control_node.dir/build.make CMakeFiles/gim_control_node.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/robot_admittance_control_node/admittance_control_node.o: src/robot_admittance_control_node/admittance_control_node.cpp.o
+.PHONY : src/robot_admittance_control_node/admittance_control_node.o
+
+# target to build an object file
+src/robot_admittance_control_node/admittance_control_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_control_node.dir/build.make CMakeFiles/admittance_control_node.dir/src/robot_admittance_control_node/admittance_control_node.cpp.o
+.PHONY : src/robot_admittance_control_node/admittance_control_node.cpp.o
+
+src/robot_admittance_control_node/admittance_control_node.i: src/robot_admittance_control_node/admittance_control_node.cpp.i
+.PHONY : src/robot_admittance_control_node/admittance_control_node.i
+
+# target to preprocess a source file
+src/robot_admittance_control_node/admittance_control_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_control_node.dir/build.make CMakeFiles/admittance_control_node.dir/src/robot_admittance_control_node/admittance_control_node.cpp.i
+.PHONY : src/robot_admittance_control_node/admittance_control_node.cpp.i
+
+src/robot_admittance_control_node/admittance_control_node.s: src/robot_admittance_control_node/admittance_control_node.cpp.s
+.PHONY : src/robot_admittance_control_node/admittance_control_node.s
+
+# target to generate assembly for a file
+src/robot_admittance_control_node/admittance_control_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_control_node.dir/build.make CMakeFiles/admittance_control_node.dir/src/robot_admittance_control_node/admittance_control_node.cpp.s
+.PHONY : src/robot_admittance_control_node/admittance_control_node.cpp.s
+
+src/robot_admittance_control_node/admittance_tuner_node.o: src/robot_admittance_control_node/admittance_tuner_node.cpp.o
+.PHONY : src/robot_admittance_control_node/admittance_tuner_node.o
+
+# target to build an object file
+src/robot_admittance_control_node/admittance_tuner_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_tuner_node.dir/build.make CMakeFiles/admittance_tuner_node.dir/src/robot_admittance_control_node/admittance_tuner_node.cpp.o
+.PHONY : src/robot_admittance_control_node/admittance_tuner_node.cpp.o
+
+src/robot_admittance_control_node/admittance_tuner_node.i: src/robot_admittance_control_node/admittance_tuner_node.cpp.i
+.PHONY : src/robot_admittance_control_node/admittance_tuner_node.i
+
+# target to preprocess a source file
+src/robot_admittance_control_node/admittance_tuner_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_tuner_node.dir/build.make CMakeFiles/admittance_tuner_node.dir/src/robot_admittance_control_node/admittance_tuner_node.cpp.i
+.PHONY : src/robot_admittance_control_node/admittance_tuner_node.cpp.i
+
+src/robot_admittance_control_node/admittance_tuner_node.s: src/robot_admittance_control_node/admittance_tuner_node.cpp.s
+.PHONY : src/robot_admittance_control_node/admittance_tuner_node.s
+
+# target to generate assembly for a file
+src/robot_admittance_control_node/admittance_tuner_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_tuner_node.dir/build.make CMakeFiles/admittance_tuner_node.dir/src/robot_admittance_control_node/admittance_tuner_node.cpp.s
+.PHONY : src/robot_admittance_control_node/admittance_tuner_node.cpp.s
 
 src/robot_hardware/src/gim_control_interface.o: src/robot_hardware/src/gim_control_interface.cpp.o
 .PHONY : src/robot_hardware/src/gim_control_interface.o
@@ -396,6 +446,30 @@ src/robot_impedance_control_node/impedance_control_node.s: src/robot_impedance_c
 src/robot_impedance_control_node/impedance_control_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_control_node.dir/build.make CMakeFiles/impedance_control_node.dir/src/robot_impedance_control_node/impedance_control_node.cpp.s
 .PHONY : src/robot_impedance_control_node/impedance_control_node.cpp.s
+
+src/robot_impedance_control_node/impedance_trajectory_node.o: src/robot_impedance_control_node/impedance_trajectory_node.cpp.o
+.PHONY : src/robot_impedance_control_node/impedance_trajectory_node.o
+
+# target to build an object file
+src/robot_impedance_control_node/impedance_trajectory_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_trajectory_node.dir/build.make CMakeFiles/impedance_trajectory_node.dir/src/robot_impedance_control_node/impedance_trajectory_node.cpp.o
+.PHONY : src/robot_impedance_control_node/impedance_trajectory_node.cpp.o
+
+src/robot_impedance_control_node/impedance_trajectory_node.i: src/robot_impedance_control_node/impedance_trajectory_node.cpp.i
+.PHONY : src/robot_impedance_control_node/impedance_trajectory_node.i
+
+# target to preprocess a source file
+src/robot_impedance_control_node/impedance_trajectory_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_trajectory_node.dir/build.make CMakeFiles/impedance_trajectory_node.dir/src/robot_impedance_control_node/impedance_trajectory_node.cpp.i
+.PHONY : src/robot_impedance_control_node/impedance_trajectory_node.cpp.i
+
+src/robot_impedance_control_node/impedance_trajectory_node.s: src/robot_impedance_control_node/impedance_trajectory_node.cpp.s
+.PHONY : src/robot_impedance_control_node/impedance_trajectory_node.s
+
+# target to generate assembly for a file
+src/robot_impedance_control_node/impedance_trajectory_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/impedance_trajectory_node.dir/build.make CMakeFiles/impedance_trajectory_node.dir/src/robot_impedance_control_node/impedance_trajectory_node.cpp.s
+.PHONY : src/robot_impedance_control_node/impedance_trajectory_node.cpp.s
 
 src/robot_impedance_control_node/impedance_tuner_node.o: src/robot_impedance_control_node/impedance_tuner_node.cpp.o
 .PHONY : src/robot_impedance_control_node/impedance_tuner_node.o
@@ -556,26 +630,34 @@ help:
 	@echo "... test"
 	@echo "... gim_control_uninstall"
 	@echo "... uninstall"
+	@echo "... admittance_control_node"
+	@echo "... admittance_tuner_node"
 	@echo "... gim_control_interface"
 	@echo "... gim_control_node"
 	@echo "... gim_kinematics"
 	@echo "... gim_trajectory"
 	@echo "... impedance_control_node"
-	@echo "... impedance_simulator_node"
+	@echo "... impedance_trajectory_node"
 	@echo "... impedance_tuner_node"
 	@echo "... trajectory_simulator_node"
-	@echo "... src/impedance_simulator_node.o"
-	@echo "... src/impedance_simulator_node.i"
-	@echo "... src/impedance_simulator_node.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/robot_admittance_control_node/admittance_control_node.o"
+	@echo "... src/robot_admittance_control_node/admittance_control_node.i"
+	@echo "... src/robot_admittance_control_node/admittance_control_node.s"
+	@echo "... src/robot_admittance_control_node/admittance_tuner_node.o"
+	@echo "... src/robot_admittance_control_node/admittance_tuner_node.i"
+	@echo "... src/robot_admittance_control_node/admittance_tuner_node.s"
 	@echo "... src/robot_hardware/src/gim_control_interface.o"
 	@echo "... src/robot_hardware/src/gim_control_interface.i"
 	@echo "... src/robot_hardware/src/gim_control_interface.s"
 	@echo "... src/robot_impedance_control_node/impedance_control_node.o"
 	@echo "... src/robot_impedance_control_node/impedance_control_node.i"
 	@echo "... src/robot_impedance_control_node/impedance_control_node.s"
+	@echo "... src/robot_impedance_control_node/impedance_trajectory_node.o"
+	@echo "... src/robot_impedance_control_node/impedance_trajectory_node.i"
+	@echo "... src/robot_impedance_control_node/impedance_trajectory_node.s"
 	@echo "... src/robot_impedance_control_node/impedance_tuner_node.o"
 	@echo "... src/robot_impedance_control_node/impedance_tuner_node.i"
 	@echo "... src/robot_impedance_control_node/impedance_tuner_node.s"

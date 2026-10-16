@@ -321,11 +321,11 @@ ament_cmake_symlink_install_files("/home/tue/gim_control" FILES "/opt/ros/humble
 # install(FILES "/home/tue/gim_control/build/gim_control/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/gim_control/environment")
 ament_cmake_symlink_install_files("/home/tue/gim_control" FILES "/home/tue/gim_control/build/gim_control/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/gim_control/environment")
 
-# install("TARGETS" "gim_control_interface" "gim_kinematics" "gim_trajectory" "gim_control_node" "trajectory_simulator_node" "impedance_simulator_node" "impedance_control_node" "impedance_tuner_node" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/gim_control")
+# install("TARGETS" "gim_control_interface" "gim_kinematics" "gim_trajectory" "gim_control_node" "trajectory_simulator_node" "impedance_control_node" "impedance_tuner_node" "impedance_trajectory_node" "admittance_control_node" "admittance_tuner_node" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/gim_control")
 include("/home/tue/gim_control/build/gim_control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(PROGRAMS "scripts/plot_calibration.py" "DESTINATION" "lib/gim_control")
-ament_cmake_symlink_install_programs("/home/tue/gim_control" PROGRAMS "scripts/plot_calibration.py" "DESTINATION" "lib/gim_control")
+# install(PROGRAMS "scripts/plot_calibration.py" "scripts/plot_admittance.py" "scripts/plot_trajectory.py" "DESTINATION" "lib/gim_control")
+ament_cmake_symlink_install_programs("/home/tue/gim_control" PROGRAMS "scripts/plot_calibration.py" "scripts/plot_admittance.py" "scripts/plot_trajectory.py" "DESTINATION" "lib/gim_control")
 
 # install(DIRECTORY "src/robot_description/urdf/" "DESTINATION" "share/gim_control/urdf")
 ament_cmake_symlink_install_directory("/home/tue/gim_control" DIRECTORY "src/robot_description/urdf/" "DESTINATION" "share/gim_control/urdf")

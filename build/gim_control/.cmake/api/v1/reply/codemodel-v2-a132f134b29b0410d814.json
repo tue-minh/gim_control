@@ -1,0 +1,160 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f27ab7c986f51b860992.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "gim_control",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "admittance_control_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-admittance_control_node-Release-131169eb4fbbac89a3b4.json",
+					"name" : "admittance_control_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "admittance_tuner_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-admittance_tuner_node-Release-569da0aade1bba7131f0.json",
+					"name" : "admittance_tuner_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_control_interface::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_control_interface-Release-f5fdbc4ecd2f87418485.json",
+					"name" : "gim_control_interface",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_control_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_control_node-Release-7e050623df2aca2adda9.json",
+					"name" : "gim_control_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_control_uninstall-Release-9491f632a3c47aed0c27.json",
+					"name" : "gim_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_kinematics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_kinematics-Release-77fdeb9b32909a8bb7be.json",
+					"name" : "gim_kinematics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gim_trajectory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gim_trajectory-Release-2437a357f67769253fd7.json",
+					"name" : "gim_trajectory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "impedance_control_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-impedance_control_node-Release-5ed91c3f5ac5e963c5fd.json",
+					"name" : "impedance_control_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "impedance_trajectory_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-impedance_trajectory_node-Release-96c5e9d2cf000d5f2259.json",
+					"name" : "impedance_trajectory_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "impedance_tuner_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-impedance_tuner_node-Release-8198113085a824195604.json",
+					"name" : "impedance_tuner_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trajectory_simulator_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trajectory_simulator_node-Release-c42428ccdb73c59f53eb.json",
+					"name" : "trajectory_simulator_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-4d52065eb57cca42f96e.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tue/gim_control/build/gim_control",
+		"source" : "/home/tue/gim_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

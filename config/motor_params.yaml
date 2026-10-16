@@ -1,6 +1,7 @@
-# gim_control motor parameters - source of truth for impedance_control_node.
-# The node loads this file at start-up and re-writes it whenever a parameter changes
-# (auto_save_params). Hand edits are kept while the node is stopped.
+# gim_control motor parameters - source of truth for the control nodes.
+# `motors:` holds shared motor/PID config plus the `admittance:` block; `global:` holds
+# the loop settings. The node loads this file at start-up and re-writes it whenever an
+# admittance parameter changes (auto_save_params).
 motors:
   base:
     node_id: 0
@@ -10,15 +11,19 @@ motors:
     torque_sign: -1
     torque_gear_ratio: 1
     torque_limit: 5
-    joint_lower: -0.7121
+    joint_lower: -0.71209999999999996
     joint_upper: 1.0226
+    deadband_torque: 0.050000000000000003
     pid:
       pos_gain: 4
       vel_gain: 1.2
-      vel_integrator_gain: 0.1
-    impedance:
-      kp: 0
-      kd: 0
+      vel_integrator_gain: 0.10000000000000001
+    admittance:
+      mass: 0.14999999999999999
+      damping: 4
+      stiffness: 25
+      max_delta_q: 0.5
+      max_admit_vel: 2
   shoulder:
     node_id: 1
     joint_name: shoulder_joint
@@ -28,14 +33,18 @@ motors:
     torque_gear_ratio: 8
     torque_limit: 40
     joint_lower: -0.2366
-    joint_upper: 1.3435
+    joint_upper: 1.3434999999999999
+    deadband_torque: 0.050000000000000003
     pid:
       pos_gain: 0.5
-      vel_gain: 0.1
+      vel_gain: 0.10000000000000001
       vel_integrator_gain: 0
-    impedance:
-      kp: 0
-      kd: 0
+    admittance:
+      mass: 0.14999999999999999
+      damping: 4
+      stiffness: 25
+      max_delta_q: 0.5
+      max_admit_vel: 2
   elbow:
     node_id: 2
     joint_name: elbow_joint
@@ -46,10 +55,19 @@ motors:
     torque_limit: 5
     joint_lower: -0.2336
     joint_upper: 1.7762
+    deadband_torque: 0.050000000000000003
     pid:
-      pos_gain: 4
-      vel_gain: 1.5
-      vel_integrator_gain: 0.1
-    impedance:
-      kp: 24
-      kd: 0.3
+      pos_gain: 2
+      vel_gain: 0.40000000000000002
+      vel_integrator_gain: 0.10000000000000001
+    admittance:
+      mass: 0.14999999999999999
+      damping: 4
+      stiffness: 25
+      max_delta_q: 0.5
+      max_admit_vel: 2
+global:
+  control_rate_hz: 100
+  encoder_timeout: 0.20000000000000001
+  tare_samples: 50
+  torque_filter_hz: 20

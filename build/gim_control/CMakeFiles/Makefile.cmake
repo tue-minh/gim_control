@@ -742,7 +742,9 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/gim_control_interface.dir/DependInfo.cmake"
   "CMakeFiles/gim_control_node.dir/DependInfo.cmake"
   "CMakeFiles/trajectory_simulator_node.dir/DependInfo.cmake"
-  "CMakeFiles/impedance_simulator_node.dir/DependInfo.cmake"
   "CMakeFiles/impedance_control_node.dir/DependInfo.cmake"
   "CMakeFiles/impedance_tuner_node.dir/DependInfo.cmake"
+  "CMakeFiles/impedance_trajectory_node.dir/DependInfo.cmake"
+  "CMakeFiles/admittance_control_node.dir/DependInfo.cmake"
+  "CMakeFiles/admittance_tuner_node.dir/DependInfo.cmake"
   )

@@ -72,12 +72,6 @@ add_executable(trajectory_simulator_node
 ament_target_dependencies(trajectory_simulator_node rclcpp sensor_msgs)
 target_link_libraries(trajectory_simulator_node gim_kinematics gim_trajectory)
 
-add_executable(impedance_simulator_node
-  src/impedance_simulator_node.cpp
-)
-ament_target_dependencies(impedance_simulator_node rclcpp std_msgs sensor_msgs)
-target_link_libraries(impedance_simulator_node gim_control_interface)
-
 add_executable(impedance_control_node
   src/robot_impedance_control_node/impedance_control_node.cpp
 )
@@ -89,15 +83,32 @@ add_executable(impedance_tuner_node
 )
 ament_target_dependencies(impedance_tuner_node rclcpp std_msgs sensor_msgs)
 
+add_executable(impedance_trajectory_node
+  src/robot_impedance_control_node/impedance_trajectory_node.cpp
+)
+ament_target_dependencies(impedance_trajectory_node rclcpp std_msgs sensor_msgs)
+target_link_libraries(impedance_trajectory_node gim_control_interface gim_trajectory yaml-cpp)
+
+add_executable(admittance_control_node
+  src/robot_admittance_control_node/admittance_control_node.cpp
+)
+ament_target_dependencies(admittance_control_node rclcpp std_msgs sensor_msgs)
+target_link_libraries(admittance_control_node gim_control_interface yaml-cpp)
+
+add_executable(admittance_tuner_node
+  src/robot_admittance_control_node/admittance_tuner_node.cpp
+)
+ament_target_dependencies(admittance_tuner_node rclcpp std_msgs sensor_msgs)
+
 ament_export_libraries(gim_control_interface gim_kinematics gim_trajectory)
 
-install(TARGETS gim_control_interface gim_kinematics gim_trajectory gim_control_node trajectory_simulator_node impedance_simulator_node impedance_control_node impedance_tuner_node
+install(TARGETS gim_control_interface gim_kinematics gim_trajectory gim_control_node trajectory_simulator_node impedance_control_node impedance_tuner_node impedance_trajectory_node admittance_control_node admittance_tuner_node
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
-install(PROGRAMS scripts/plot_calibration.py
+install(PROGRAMS scripts/plot_calibration.py scripts/plot_admittance.py scripts/plot_trajectory.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
