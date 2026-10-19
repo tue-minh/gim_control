@@ -100,15 +100,32 @@ add_executable(admittance_tuner_node
 )
 ament_target_dependencies(admittance_tuner_node rclcpp std_msgs sensor_msgs)
 
+add_executable(position_control_node
+  src/robot_position_control_node/position_control_node.cpp
+)
+ament_target_dependencies(position_control_node rclcpp std_msgs sensor_msgs)
+target_link_libraries(position_control_node gim_control_interface yaml-cpp)
+
+add_executable(position_tuner_node
+  src/robot_position_control_node/position_tuner_node.cpp
+)
+ament_target_dependencies(position_tuner_node rclcpp std_msgs sensor_msgs)
+
+add_executable(position_trajectory_node
+  src/robot_position_control_node/position_trajectory_node.cpp
+)
+ament_target_dependencies(position_trajectory_node rclcpp std_msgs sensor_msgs)
+target_link_libraries(position_trajectory_node gim_control_interface yaml-cpp)
+
 ament_export_libraries(gim_control_interface gim_kinematics gim_trajectory)
 
-install(TARGETS gim_control_interface gim_kinematics gim_trajectory gim_control_node trajectory_simulator_node impedance_control_node impedance_tuner_node impedance_trajectory_node admittance_control_node admittance_tuner_node
+install(TARGETS gim_control_interface gim_kinematics gim_trajectory gim_control_node trajectory_simulator_node impedance_control_node impedance_tuner_node impedance_trajectory_node admittance_control_node admittance_tuner_node position_control_node position_tuner_node position_trajectory_node
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
-install(PROGRAMS scripts/plot_calibration.py scripts/plot_admittance.py scripts/plot_trajectory.py
+install(PROGRAMS scripts/plot_calibration.py scripts/plot_admittance.py scripts/plot_trajectory.py scripts/plot_position_trajectory.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -327,6 +327,45 @@ admittance_tuner_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/admittance_tuner_node.dir/build.make CMakeFiles/admittance_tuner_node.dir/build
 .PHONY : admittance_tuner_node/fast
 
+#=============================================================================
+# Target rules for targets named position_control_node
+
+# Build rule for target.
+position_control_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 position_control_node
+.PHONY : position_control_node
+
+# fast build rule for target.
+position_control_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_control_node.dir/build.make CMakeFiles/position_control_node.dir/build
+.PHONY : position_control_node/fast
+
+#=============================================================================
+# Target rules for targets named position_tuner_node
+
+# Build rule for target.
+position_tuner_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 position_tuner_node
+.PHONY : position_tuner_node
+
+# fast build rule for target.
+position_tuner_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_tuner_node.dir/build.make CMakeFiles/position_tuner_node.dir/build
+.PHONY : position_tuner_node/fast
+
+#=============================================================================
+# Target rules for targets named position_trajectory_node
+
+# Build rule for target.
+position_trajectory_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 position_trajectory_node
+.PHONY : position_trajectory_node
+
+# fast build rule for target.
+position_trajectory_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_trajectory_node.dir/build.make CMakeFiles/position_trajectory_node.dir/build
+.PHONY : position_trajectory_node/fast
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -567,6 +606,78 @@ src/robot_kinematic/src/jacobian.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gim_kinematics.dir/build.make CMakeFiles/gim_kinematics.dir/src/robot_kinematic/src/jacobian.cpp.s
 .PHONY : src/robot_kinematic/src/jacobian.cpp.s
 
+src/robot_position_control_node/position_control_node.o: src/robot_position_control_node/position_control_node.cpp.o
+.PHONY : src/robot_position_control_node/position_control_node.o
+
+# target to build an object file
+src/robot_position_control_node/position_control_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_control_node.dir/build.make CMakeFiles/position_control_node.dir/src/robot_position_control_node/position_control_node.cpp.o
+.PHONY : src/robot_position_control_node/position_control_node.cpp.o
+
+src/robot_position_control_node/position_control_node.i: src/robot_position_control_node/position_control_node.cpp.i
+.PHONY : src/robot_position_control_node/position_control_node.i
+
+# target to preprocess a source file
+src/robot_position_control_node/position_control_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_control_node.dir/build.make CMakeFiles/position_control_node.dir/src/robot_position_control_node/position_control_node.cpp.i
+.PHONY : src/robot_position_control_node/position_control_node.cpp.i
+
+src/robot_position_control_node/position_control_node.s: src/robot_position_control_node/position_control_node.cpp.s
+.PHONY : src/robot_position_control_node/position_control_node.s
+
+# target to generate assembly for a file
+src/robot_position_control_node/position_control_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_control_node.dir/build.make CMakeFiles/position_control_node.dir/src/robot_position_control_node/position_control_node.cpp.s
+.PHONY : src/robot_position_control_node/position_control_node.cpp.s
+
+src/robot_position_control_node/position_trajectory_node.o: src/robot_position_control_node/position_trajectory_node.cpp.o
+.PHONY : src/robot_position_control_node/position_trajectory_node.o
+
+# target to build an object file
+src/robot_position_control_node/position_trajectory_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_trajectory_node.dir/build.make CMakeFiles/position_trajectory_node.dir/src/robot_position_control_node/position_trajectory_node.cpp.o
+.PHONY : src/robot_position_control_node/position_trajectory_node.cpp.o
+
+src/robot_position_control_node/position_trajectory_node.i: src/robot_position_control_node/position_trajectory_node.cpp.i
+.PHONY : src/robot_position_control_node/position_trajectory_node.i
+
+# target to preprocess a source file
+src/robot_position_control_node/position_trajectory_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_trajectory_node.dir/build.make CMakeFiles/position_trajectory_node.dir/src/robot_position_control_node/position_trajectory_node.cpp.i
+.PHONY : src/robot_position_control_node/position_trajectory_node.cpp.i
+
+src/robot_position_control_node/position_trajectory_node.s: src/robot_position_control_node/position_trajectory_node.cpp.s
+.PHONY : src/robot_position_control_node/position_trajectory_node.s
+
+# target to generate assembly for a file
+src/robot_position_control_node/position_trajectory_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_trajectory_node.dir/build.make CMakeFiles/position_trajectory_node.dir/src/robot_position_control_node/position_trajectory_node.cpp.s
+.PHONY : src/robot_position_control_node/position_trajectory_node.cpp.s
+
+src/robot_position_control_node/position_tuner_node.o: src/robot_position_control_node/position_tuner_node.cpp.o
+.PHONY : src/robot_position_control_node/position_tuner_node.o
+
+# target to build an object file
+src/robot_position_control_node/position_tuner_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_tuner_node.dir/build.make CMakeFiles/position_tuner_node.dir/src/robot_position_control_node/position_tuner_node.cpp.o
+.PHONY : src/robot_position_control_node/position_tuner_node.cpp.o
+
+src/robot_position_control_node/position_tuner_node.i: src/robot_position_control_node/position_tuner_node.cpp.i
+.PHONY : src/robot_position_control_node/position_tuner_node.i
+
+# target to preprocess a source file
+src/robot_position_control_node/position_tuner_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_tuner_node.dir/build.make CMakeFiles/position_tuner_node.dir/src/robot_position_control_node/position_tuner_node.cpp.i
+.PHONY : src/robot_position_control_node/position_tuner_node.cpp.i
+
+src/robot_position_control_node/position_tuner_node.s: src/robot_position_control_node/position_tuner_node.cpp.s
+.PHONY : src/robot_position_control_node/position_tuner_node.s
+
+# target to generate assembly for a file
+src/robot_position_control_node/position_tuner_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/position_tuner_node.dir/build.make CMakeFiles/position_tuner_node.dir/src/robot_position_control_node/position_tuner_node.cpp.s
+.PHONY : src/robot_position_control_node/position_tuner_node.cpp.s
+
 src/robot_trajectory/src/trajectory.o: src/robot_trajectory/src/trajectory.cpp.o
 .PHONY : src/robot_trajectory/src/trajectory.o
 
@@ -639,6 +750,9 @@ help:
 	@echo "... impedance_control_node"
 	@echo "... impedance_trajectory_node"
 	@echo "... impedance_tuner_node"
+	@echo "... position_control_node"
+	@echo "... position_trajectory_node"
+	@echo "... position_tuner_node"
 	@echo "... trajectory_simulator_node"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
@@ -670,6 +784,15 @@ help:
 	@echo "... src/robot_kinematic/src/jacobian.o"
 	@echo "... src/robot_kinematic/src/jacobian.i"
 	@echo "... src/robot_kinematic/src/jacobian.s"
+	@echo "... src/robot_position_control_node/position_control_node.o"
+	@echo "... src/robot_position_control_node/position_control_node.i"
+	@echo "... src/robot_position_control_node/position_control_node.s"
+	@echo "... src/robot_position_control_node/position_trajectory_node.o"
+	@echo "... src/robot_position_control_node/position_trajectory_node.i"
+	@echo "... src/robot_position_control_node/position_trajectory_node.s"
+	@echo "... src/robot_position_control_node/position_tuner_node.o"
+	@echo "... src/robot_position_control_node/position_tuner_node.i"
+	@echo "... src/robot_position_control_node/position_tuner_node.s"
 	@echo "... src/robot_trajectory/src/trajectory.o"
 	@echo "... src/robot_trajectory/src/trajectory.i"
 	@echo "... src/robot_trajectory/src/trajectory.s"

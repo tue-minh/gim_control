@@ -1,7 +1,7 @@
 # gim_control motor parameters - source of truth for the control nodes.
-# `motors:` holds shared motor/PID config plus the `admittance:` block; `global:` holds
-# the loop settings. The node loads this file at start-up and re-writes it whenever an
-# admittance parameter changes (auto_save_params).
+# `motors:` holds shared motor/PID config plus the `position:`, `admittance:` and `impedance:`
+# blocks; `global:` holds the loop settings. The node loads this file at start-up and re-writes
+# it whenever a tuned parameter changes (auto_save_params).
 motors:
   base:
     node_id: 0
@@ -18,6 +18,10 @@ motors:
       pos_gain: 4
       vel_gain: 1.2
       vel_integrator_gain: 0.10000000000000001
+    position:
+      vel_limit: 4
+      accel_limit: 0
+      decel_limit: 0
     admittance:
       mass: 0.14999999999999999
       damping: 4
@@ -39,6 +43,10 @@ motors:
       pos_gain: 0.5
       vel_gain: 0.10000000000000001
       vel_integrator_gain: 0
+    position:
+      vel_limit: 4
+      accel_limit: 0
+      decel_limit: 0
     admittance:
       mass: 0.14999999999999999
       damping: 4
@@ -60,10 +68,14 @@ motors:
       pos_gain: 2
       vel_gain: 0.40000000000000002
       vel_integrator_gain: 0.10000000000000001
+    position:
+      vel_limit: 4
+      accel_limit: 0
+      decel_limit: 0
     admittance:
       mass: 0.14999999999999999
-      damping: 4
-      stiffness: 25
+      damping: 30
+      stiffness: 300
       max_delta_q: 0.5
       max_admit_vel: 2
 global:

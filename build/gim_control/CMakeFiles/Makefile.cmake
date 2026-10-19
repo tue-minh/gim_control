@@ -747,4 +747,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/impedance_trajectory_node.dir/DependInfo.cmake"
   "CMakeFiles/admittance_control_node.dir/DependInfo.cmake"
   "CMakeFiles/admittance_tuner_node.dir/DependInfo.cmake"
+  "CMakeFiles/position_control_node.dir/DependInfo.cmake"
+  "CMakeFiles/position_tuner_node.dir/DependInfo.cmake"
+  "CMakeFiles/position_trajectory_node.dir/DependInfo.cmake"
   )
